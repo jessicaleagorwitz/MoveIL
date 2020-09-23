@@ -1,0 +1,28 @@
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\Moveil.mdf
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\Moveil_log.ldf
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\DAL.dll.config
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\DAL.dll
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\DAL.pdb
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\EntityFramework.dll
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\EntityFramework.xml
+C:\Users\mgorw\source\repos\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mgorw\source\repos\SERVER\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\mgorw\source\repos\SERVER\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\mgorw\source\repos\SERVER\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\mgorw\source\repos\SERVER\DAL\obj\Debug\DAL.dll
+C:\Users\mgorw\source\repos\SERVER\DAL\obj\Debug\DAL.pdb
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\Moveil.mdf
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\Moveil_log.ldf
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\DAL.dll.config
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\DAL.dll
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\DAL.pdb
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\EntityFramework.dll
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\EntityFramework.xml
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\obj\Debug\DAL.dll
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DAL\obj\Debug\DAL.pdb

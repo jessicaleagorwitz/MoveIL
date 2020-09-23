@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MoveilModelStoreContainer" CdmEntityContainer="MoveilEntities">
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="MoveilModel.City">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="CityName" ColumnName="CityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comunities">
+      <EntityTypeMapping TypeName="MoveilModel.Comunity">
+        <MappingFragment StoreEntitySet="Comunities">
+          <ScalarProperty Name="ComunityCode" ColumnName="ComunityCode" />
+          <ScalarProperty Name="ComunityName" ColumnName="ComunityName" />
+          <ScalarProperty Name="CityCode" ColumnName="CityCode" />
+          <ScalarProperty Name="NeighborhoodName" ColumnName="NeighborhoodName" />
+          <ScalarProperty Name="SinagogueName" ColumnName="SinagogueName" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="SectorCode" ColumnName="SectorCode" />
+          <ScalarProperty Name="PercentageOfPeople" ColumnName="PercentageOfPeople" />
+          <ScalarProperty Name="Workers" ColumnName="Workers" />
+          <ScalarProperty Name="MinAptPrice" ColumnName="MinAptPrice" />
+          <ScalarProperty Name="MaxAptPrice" ColumnName="MaxAptPrice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComunityContacts">
+      <EntityTypeMapping TypeName="MoveilModel.ComunityContact">
+        <MappingFragment StoreEntitySet="ComunityContacts">
+          <ScalarProperty Name="ContactCode" ColumnName="ContactCode" />
+          <ScalarProperty Name="ComunityCode" ColumnName="ComunityCode" />
+          <ScalarProperty Name="ProfessionCode" ColumnName="ProfessionCode" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="FamilyStatus" ColumnName="FamilyStatus" />
+          <ScalarProperty Name="SectorCode" ColumnName="SectorCode" />
+          <ScalarProperty Name="YearOfAlia" ColumnName="YearOfAlia" />
+          <ScalarProperty Name="DoesSpeakSpanish" ColumnName="DoesSpeakSpanish" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComunityContactsForCountries">
+      <EntityTypeMapping TypeName="MoveilModel.ComunityContactsForCountry">
+        <MappingFragment StoreEntitySet="ComunityContactsForCountries">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ComunityCode" ColumnName="ComunityCode" />
+          <ScalarProperty Name="NumbreOfResidents" ColumnName="NumbreOfResidents" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="MoveilModel.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlacesOfStudies">
+      <EntityTypeMapping TypeName="MoveilModel.PlacesOfStudy">
+        <MappingFragment StoreEntitySet="PlacesOfStudy">
+          <ScalarProperty Name="PlaceCode" ColumnName="PlaceCode" />
+          <ScalarProperty Name="PlaceName" ColumnName="PlaceName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="SectorCode" ColumnName="SectorCode" />
+          <ScalarProperty Name="DoesItHaveBoardingSchool" ColumnName="DoesItHaveBoardingSchool" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Professions">
+      <EntityTypeMapping TypeName="MoveilModel.Profession">
+        <MappingFragment StoreEntitySet="Professions">
+          <ScalarProperty Name="ProfessionCode" ColumnName="ProfessionCode" />
+          <ScalarProperty Name="ProfessionName" ColumnName="ProfessionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProfessionsForPlaceToStudies">
+      <EntityTypeMapping TypeName="MoveilModel.ProfessionsForPlaceToStudy">
+        <MappingFragment StoreEntitySet="ProfessionsForPlaceToStudy">
+          <ScalarProperty Name="PlaceCode" ColumnName="PlaceCode" />
+          <ScalarProperty Name="ProfessionCode" ColumnName="ProfessionCode" />
+          <ScalarProperty Name="AmountYears" ColumnName="AmountYears" />
+          <ScalarProperty Name="DoesSpeakHebrew" ColumnName="DoesSpeakHebrew" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recommendations">
+      <EntityTypeMapping TypeName="MoveilModel.Recommendation">
+        <MappingFragment StoreEntitySet="Recommendations">
+          <ScalarProperty Name="RecommendationCode" ColumnName="RecommendationCode" />
+          <ScalarProperty Name="ContactCode" ColumnName="ContactCode" />
+          <ScalarProperty Name="FreeDescription" ColumnName="FreeDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sectors">
+      <EntityTypeMapping TypeName="MoveilModel.Sector">
+        <MappingFragment StoreEntitySet="Sector">
+          <ScalarProperty Name="SectorCode" ColumnName="SectorCode" />
+          <ScalarProperty Name="SectorName" ColumnName="SectorName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MoveilModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
