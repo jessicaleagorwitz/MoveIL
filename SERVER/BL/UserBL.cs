@@ -11,6 +11,7 @@ namespace BL
     {
         public static void AddUser(UserDTO com)
         {
+            //
             using (DAL.MoveilEntities db = new DAL.MoveilEntities())
             {
                 db.Users.Add(CONVERTERES.UserConverters.UsertoDal(com));
