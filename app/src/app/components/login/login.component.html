@@ -1,0 +1,105 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="center">
+        <h1>Login </h1>
+    
+        <app-login> </app-login>
+    <form [formGroup]="myform">
+        <div class="form-group">
+            <label> User Name</label>
+            <input type="text" class="form-control" formControlName="userName">
+            <ul *ngIf="myform.controls['userName'].errors!=null">
+                <li *ngIf="myform.controls['userName'].errors.pattern!=null"> error! solo letras</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class="form-control" formControlName="firstName">
+            <ul *ngIf="myform.controls['firstName'].errors!=null">
+                <li *ngIf="myform.controls['firstName'].errors.pattern!=null"> error! solo letras</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName">
+            <ul *ngIf="myform.controls['lastName'].errors!=null">
+                <li *ngIf="myform.controls['lastName'].errors.minlength!=null"> error! tiene q ser:
+                    {{myform.controls['lastName'].errors.minlenght.requiredlength}}</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" formControlName="Email">
+            <ul *ngIf="myform.controls['Email'].errors!=null">
+                <li *ngIf="myform.controls['Email'].errors.minlength!=null">
+                    debe de tener</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label> Telephone</label>
+            <input type="text" class="form-control" formControlName=" telephone">
+            <ul *ngIf="myform.controls['telephone'].errors!=null">
+                <li *ngIf="myform.controls['telephone'].errors.pattern!=null">
+                    tienes {{myform.controls['birthDate'].errors.ageError.ActualAge}} y deberias
+                    {{myform.controls['birthDate'].errors.ageError.requieredAge}} </li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label>Country</label>
+            <input type="text" class="form-control" formControlName="country">
+            <ul *ngIf="myform.controls['country'].errors!=null">
+                <li *ngIf="myform.controls['country'].errors.minlength!=null">
+                    debe de tener</li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label> Password</label>
+            <input type="text" class="form-control" formControlName="password">
+    
+        </div>
+        <div class="form-group">
+            <label> confirm</label>
+            <input type="text" class="form-control" formControlName="confirm">
+    
+        </div>
+        <div>
+            <input type="checkbox" formControlName="accept"> <label>Acepto los terminos</label>
+        </div>
+        <p>
+            <input type="submit" class="btn btn-primary" [disabled]="!myform.valid">
+    </form>
+    
+    </div>
+</body>
+</html>
+-->
+<div class="main">
+    <form [formGroup]="myform" >
+    <div class="form-group">
+        <label>user name: </label>   
+        <input type="text" class="form-control" formControlName="userName"> 
+        <div class="error" *ngIf="myform.controls['userName'].errors!=null">is required</div>
+    </div>
+    <div class="form-group">
+        <label>first Name: </label>
+        <input type="text" class="form-control" formControlName="firstName">
+        <div class="error" *ngIf="myform.controls['firstName'].errors!=null">is required</div>
+ </div>
+    <div class="form-group">
+        <label>password: </label>
+        <input type="password" class="form-control" formControlName="password">
+        <div class="error" *ngIf="myform.controls['password'].errors!=null">is required</div>
+ </div>
+    <div>
+        <input type="submit" class="btn btn-success" value="sign in">
+        <a [routerLink]="['/register']" class="btn btn-success">new user</a>
+    </div>
+    </form>
+  
+</div>

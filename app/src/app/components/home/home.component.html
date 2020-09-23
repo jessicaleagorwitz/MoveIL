@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Welcome to Moveil</h2>
+    <img src="./../../../assets/kotel.jpg" class="img-rounded" alt="Muro de los lamentos" width="304" height="236">
+    <div>
+        <div *ngFor="let q of List">
+            <div class="questionview">
+                <div class="rightside">
+                    <div class="square">
+                        <strong>{{q.ContactName}}</strong> 
+                    </div>
+                    
+                </div>
+    
+                <div class="fill">
+                    <h4> Address {{q.Address}}</h4>
+    
+    
+    
+                    <div class="left">
+                        <div> phone {{q.PhoneNumber}}</div>
+                        <div> birth date {{q.BirthDate}}</div>
+                    </div>
+                    <div>
+                        <div> <span class="tag"> Year of alia {{q.YearOfAlia}} </span> </div>
+                    </div>
+                </div>
+            </div>
+            <hr>    
+         </div> 
+        </div>
+</body>
+</html>
