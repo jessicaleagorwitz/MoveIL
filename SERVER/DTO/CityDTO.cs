@@ -8,6 +8,8 @@ namespace DTO
 {
    public class CityDTO
     {
+
+        //holaaa! funciona??
         public int CityCode { get; set; }
         public string CityName { get; set; }
     }
