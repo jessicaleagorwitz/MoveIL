@@ -18,5 +18,21 @@ namespace BL.CONVERTERES
                CityName= city.CityName
             };
         }
+        public static CityDTO ConvertCityToDTO(City city)
+        {
+            return new CityDTO
+            {
+                CityCode = city.CityCode,
+                CityName = city.CityName
+            };
+        }
+
+
+       public static List<CityDTO> ConvertCityListToDTO(List<City> list)
+        {
+           
+                return list.Select(p => ConvertCityToDTO(p)).ToList();
+            
+        }
     }
 }

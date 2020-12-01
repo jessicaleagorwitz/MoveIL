@@ -10,3 +10,9 @@ C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DTO\obj\Debug\DTO.cspr
 C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DTO\obj\Debug\DTO.dll
 C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\SERVER\DTO\obj\Debug\DTO.pdb
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\Proyecto\SERVER\DTO\bin\Debug\DTO.dll
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\Proyecto\SERVER\DTO\bin\Debug\DTO.pdb
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\Proyecto\SERVER\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\Proyecto\SERVER\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\Proyecto\SERVER\DTO\obj\Debug\DTO.dll
+C:\Users\mgorw\Pictures\jessica MAJSHEVIM\PROYECTO\Proyecto\SERVER\DTO\obj\Debug\DTO.pdb

@@ -156,6 +156,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK__ComunityC__Count__2739D489">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="ComunityContactsForCountries" Type="Self.ComunityContactsForCountries" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="ComunityContactsForCountries">
+        <PropertyRef Name="CountryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__ComunityC__Profe__02084FDA">
     <End Role="Professions" Type="Self.Professions" Multiplicity="1" />
     <End Role="ComunityContacts" Type="Self.ComunityContacts" Multiplicity="*" />
@@ -180,30 +192,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Country__Country__06CD04F7">
-    <End Role="ComunityContactsForCountries" Type="Self.ComunityContactsForCountries" Multiplicity="1" />
-    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="ComunityContactsForCountries">
-        <PropertyRef Name="CountryCode" />
-      </Principal>
-      <Dependent Role="Country">
-        <PropertyRef Name="CountryCode" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__PlacesOfS__Place__09A971A2">
-    <End Role="ProfessionsForPlaceToStudy" Type="Self.ProfessionsForPlaceToStudy" Multiplicity="1" />
-    <End Role="PlacesOfStudy" Type="Self.PlacesOfStudy" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="ProfessionsForPlaceToStudy">
-        <PropertyRef Name="PlaceCode" />
-      </Principal>
-      <Dependent Role="PlacesOfStudy">
-        <PropertyRef Name="PlaceCode" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__PlacesOfS__Secto__08B54D69">
     <End Role="Sector" Type="Self.Sector" Multiplicity="1" />
     <End Role="PlacesOfStudy" Type="Self.PlacesOfStudy" Multiplicity="*" />
@@ -213,6 +201,18 @@
       </Principal>
       <Dependent Role="PlacesOfStudy">
         <PropertyRef Name="SectorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Professio__Place__3A4CA8FD">
+    <End Role="PlacesOfStudy" Type="Self.PlacesOfStudy" Multiplicity="1" />
+    <End Role="ProfessionsForPlaceToStudy" Type="Self.ProfessionsForPlaceToStudy" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PlacesOfStudy">
+        <PropertyRef Name="PlaceCode" />
+      </Principal>
+      <Dependent Role="ProfessionsForPlaceToStudy">
+        <PropertyRef Name="PlaceCode" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -280,6 +280,10 @@
       <End Role="Comunities" EntitySet="Comunities" />
       <End Role="ComunityContactsForCountries" EntitySet="ComunityContactsForCountries" />
     </AssociationSet>
+    <AssociationSet Name="FK__ComunityC__Count__2739D489" Association="Self.FK__ComunityC__Count__2739D489">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="ComunityContactsForCountries" EntitySet="ComunityContactsForCountries" />
+    </AssociationSet>
     <AssociationSet Name="FK__ComunityC__Profe__02084FDA" Association="Self.FK__ComunityC__Profe__02084FDA">
       <End Role="Professions" EntitySet="Professions" />
       <End Role="ComunityContacts" EntitySet="ComunityContacts" />
@@ -288,17 +292,13 @@
       <End Role="Sector" EntitySet="Sector" />
       <End Role="ComunityContacts" EntitySet="ComunityContacts" />
     </AssociationSet>
-    <AssociationSet Name="FK__Country__Country__06CD04F7" Association="Self.FK__Country__Country__06CD04F7">
-      <End Role="ComunityContactsForCountries" EntitySet="ComunityContactsForCountries" />
-      <End Role="Country" EntitySet="Country" />
-    </AssociationSet>
-    <AssociationSet Name="FK__PlacesOfS__Place__09A971A2" Association="Self.FK__PlacesOfS__Place__09A971A2">
-      <End Role="ProfessionsForPlaceToStudy" EntitySet="ProfessionsForPlaceToStudy" />
-      <End Role="PlacesOfStudy" EntitySet="PlacesOfStudy" />
-    </AssociationSet>
     <AssociationSet Name="FK__PlacesOfS__Secto__08B54D69" Association="Self.FK__PlacesOfS__Secto__08B54D69">
       <End Role="Sector" EntitySet="Sector" />
       <End Role="PlacesOfStudy" EntitySet="PlacesOfStudy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Professio__Place__3A4CA8FD" Association="Self.FK__Professio__Place__3A4CA8FD">
+      <End Role="PlacesOfStudy" EntitySet="PlacesOfStudy" />
+      <End Role="ProfessionsForPlaceToStudy" EntitySet="ProfessionsForPlaceToStudy" />
     </AssociationSet>
     <AssociationSet Name="FK__Professio__Profe__0A9D95DB" Association="Self.FK__Professio__Profe__0A9D95DB">
       <End Role="Professions" EntitySet="Professions" />

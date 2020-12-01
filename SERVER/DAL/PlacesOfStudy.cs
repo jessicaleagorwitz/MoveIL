@@ -20,7 +20,7 @@ namespace DAL
         public int SectorCode { get; set; }
         public bool DoesItHaveBoardingSchool { get; set; }
     
-        public virtual ProfessionsForPlaceToStudy ProfessionsForPlaceToStudy { get; set; }
         public virtual Sector Sector { get; set; }
+        public virtual ProfessionsForPlaceToStudy ProfessionsForPlaceToStudy1 { get; set; }
     }
 }

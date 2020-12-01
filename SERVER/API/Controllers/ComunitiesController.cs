@@ -34,5 +34,12 @@ namespace API.Controllers
             return Ok(true);
         }
 
+        //[Route("Comunity"), HttpGet]
+        //public IHttpActionResult Comunity()
+        //{
+        //    BL.ComunityBL.Comunity();
+        //    return Ok(true);
+        //}
+
     }
 }

@@ -14,7 +14,7 @@ namespace BL.CONVERTERES
         {
             return new Sector
             {
-               SectorCode=com.SectorCode,
+            
                SectorName=com.SectorName
 
             };

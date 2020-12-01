@@ -18,6 +18,7 @@ namespace API.Controllers
         [HttpGet]
         public IHttpActionResult getNumComunityContacts()
         {
+          
             return Ok(1);
         }
         [Route("AddComunityContacts"), HttpPost]
@@ -31,7 +32,8 @@ namespace API.Controllers
         public IHttpActionResult getShowComunityContacts()
         
         {
-            return Ok();
+           
+            return Ok(BL.ComunityContactsBL.getShowComunityContacts());
         }
 
     }

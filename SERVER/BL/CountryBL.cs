@@ -1,4 +1,5 @@
 ﻿using DTO;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,13 @@ namespace BL
                 db.SaveChanges();
             }
         }
+        public static List<CountryDTO> getShowCountry()
+        {
+            using (MoveilEntities db = new MoveilEntities())
+            {
+                return CONVERTERES.CountryConverters.ConvertCountryListToDTO(db.Countries.ToList());
+            }
+        }
+       
     }
 }

@@ -19,7 +19,7 @@ namespace DAL
         public string AmountYears { get; set; }
         public bool DoesSpeakHebrew { get; set; }
     
-        public virtual PlacesOfStudy PlacesOfStudy { get; set; }
         public virtual Profession Profession { get; set; }
+        public virtual PlacesOfStudy PlacesOfStudy1 { get; set; }
     }
 }

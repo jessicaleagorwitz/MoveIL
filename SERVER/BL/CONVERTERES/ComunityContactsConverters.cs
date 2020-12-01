@@ -14,7 +14,7 @@ namespace BL.CONVERTERES
         {
             return new ComunityContact
             {
-                ContactCode = comunityContacts.ContactCode,
+                
                 ComunityCode = comunityContacts.ComunityCode,
                 ProfessionCode = comunityContacts.ProfessionCode,
                 ContactName = comunityContacts.ContactName,
@@ -31,7 +31,7 @@ namespace BL.CONVERTERES
         {
             return new ComunityContactsDTO
             {
-                ContactCode = comunityContacts.ContactCode,
+                
                 ComunityCode = comunityContacts.ComunityCode,
                 ProfessionCode = comunityContacts.ProfessionCode,
                 ContactName = comunityContacts.ContactName,

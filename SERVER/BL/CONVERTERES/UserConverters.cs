@@ -14,7 +14,6 @@ namespace BL.CONVERTERES
         {
             return new User
             {
-               UserCode=com.UserCode,
                UserName=com.UserName,
                FirstName=com.FirstName,
                LastName=com.LastName,

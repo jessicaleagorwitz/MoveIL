@@ -19,6 +19,6 @@ namespace DAL
         public string NumbreOfResidents { get; set; }
     
         public virtual Comunity Comunity { get; set; }
-        public virtual Country Country { get; set; }
+        public virtual Country Country1 { get; set; }
     }
 }

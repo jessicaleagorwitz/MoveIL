@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,12 @@ namespace BL
     {
         public static void AddComunity(ComunityDTO com)
         {
-            using(DAL.MoveilEntities db= new DAL.MoveilEntities())
+            using (DAL.MoveilEntities db = new DAL.MoveilEntities())
             {
                 db.Comunities.Add(CONVERTERES.ComunityConverters.ConvertComunitytoDal(com));
                 db.SaveChanges();
             }
         }
+      
     }
 }
