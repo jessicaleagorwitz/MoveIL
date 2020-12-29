@@ -25,15 +25,13 @@ namespace DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Comunity> Comunities { get; set; }
-        public virtual DbSet<ComunityContact> ComunityContacts { get; set; }
-        public virtual DbSet<ComunityContactsForCountry> ComunityContactsForCountries { get; set; }
-        public virtual DbSet<Country> Countries { get; set; }
-        public virtual DbSet<PlacesOfStudy> PlacesOfStudies { get; set; }
-        public virtual DbSet<Profession> Professions { get; set; }
-        public virtual DbSet<ProfessionsForPlaceToStudy> ProfessionsForPlaceToStudies { get; set; }
+        public virtual DbSet<NewCity> NewCities { get; set; }
+        public virtual DbSet<NewContact> NewContacts { get; set; }
+        public virtual DbSet<NewCosto> NewCostoes { get; set; }
+        public virtual DbSet<NewDistrito> NewDistritoes { get; set; }
         public virtual DbSet<Recommendation> Recommendations { get; set; }
+        public virtual DbSet<Representante> Representantes { get; set; }
         public virtual DbSet<Sector> Sectors { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

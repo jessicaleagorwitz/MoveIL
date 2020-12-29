@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main">
+  <h1 style="font-size: 60px;">Los distritos en Israel</h1>
+  <br>
+  <br>
+  <div class="card dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+  <h3>El Estado de Israel, a través del Ministerio del Interior, opera en seis distritos administrativos, cada uno con oficinas de tribunales de distrito y otras instituciones. La división se publica en la bolsa de publicaciones como una orden del gobierno: "aviso de la división del territorio estatal en distritos y subdistritos y una descripción de sus límites" y se somete a enmiendas de vez en cuando. La autoridad para determinar distritos se le otorgó al gobierno en la sección 3 de las Reglas de procedimiento y la Ordenanza legal de 1948. Sin embargo, los diferentes ministerios y organismos gubernamentales tienen diferentes divisiones.
+    Los seis distritos del estado se dividen en tres distritos urbanos: Jerusalén, Tel Aviv y Haifa; Y a tres distritos espaciales: el norte, el centro y el sur. Los distritos a su vez se dividen en quince subdistritos.</h3>
+  </div>
+</div>
+
+<div class="main">
+  <div *ngFor="let q of List">
+  <div class="card dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+      <div class="card-body">
+        <h1 class="card-title">Distrito {{q. DistritoName}}</h1>
+        <div *ngFor="let a of q.city">
+          <h4 class="card-title">~ {{a.CityName}}</h4>
+          <a class="btn  dusty-grass-gradient color-block " (click)="goToCity(a.CityCode)" >Ver mas</a>
+ 
+        </div>
+        
+       
+        
+        <br>
+      </div>
+    </div>
+    </div> 
+    </div>
+</body>
+</html>

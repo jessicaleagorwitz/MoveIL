@@ -17,8 +17,33 @@ namespace API.Controllers
         [Route("AddUser"), HttpPost]
         public IHttpActionResult AddUser(UserDTO com)
         {
-            BL.UserBL.AddUser(com);
-           return Ok(true);
+            
+           return Ok(BL.UserBL.AddUser(com));
+        }
+
+
+        [Route("getUserCode"), HttpPost]
+        public IHttpActionResult getUserCode([FromBody]int cityCode)
+
+        {
+ return Ok(BL.UserBL.getUserCode(cityCode));
+        }
+
+
+
+        [Route("SingInCheckUser"), HttpPost]
+        public IHttpActionResult SingInCheckUser([FromBody]string mail)
+
+        {
+            return Ok(BL.UserBL.SingInCheckUser(mail));
+        }
+
+        [Route("LogIn"), HttpPost]
+        public IHttpActionResult LogIn(LoginDTO log)
+        {
+          
+          
+            return Ok(BL.UserBL.LogIn(log));
         }
     }
 }

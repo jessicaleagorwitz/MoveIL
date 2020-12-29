@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Default form contact -->
+  <div class="main">
+<form [formGroup]="Form" class="text-center border border-light p-5" action="#!" (submit)="submit()">
+
+  <p class="h4 mb-4">Escribe tu experiencia para que otros la vean!!!</p>
+
+ 
+  
+
+  <!-- Message 
+  <div class="form-group">
+      <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="4" placeholder="Message"></textarea>
+  </div>-->
+  <div class="form-group">
+    <span class="error" *ngIf="Form.controls['text'].errors?.required!=null">*</span> <label>Content of a question </label>  
+    <textarea cols="250" rows="15" class="form-control" formControlName="text"></textarea>
+</div>
+
+
+  <!-- Send button -->
+  <button class="btn btn-info btn-block" type="submit">Send</button>
+
+</form>
+<!-- Default form contact -->
+  </div>
+</body>
+</html>

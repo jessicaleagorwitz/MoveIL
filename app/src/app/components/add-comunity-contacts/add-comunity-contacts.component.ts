@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComunityContacts } from 'src/app/shared/models/ComunityContacts.model';
+import { Contacts } from 'src/app/shared/models/Contacts.model';
 import { ComunityContactsService } from 'src/app/shared/services/comunity-contacts.service';
 
 @Component({
@@ -8,15 +8,15 @@ import { ComunityContactsService } from 'src/app/shared/services/comunity-contac
   styleUrls: ['./add-comunity-contacts.component.css']
 })
 export class AddComunityContactsComponent implements OnInit {
-comContacts: ComunityContacts= new ComunityContacts();
+comContacts: Contacts= new Contacts();
 contactList; //Array<ComunityContacts> = new Array<ComunityContacts>();
 
-List: Array<ComunityContacts>
+List: Array<Contacts>
   constructor(private comContactService: ComunityContactsService) {
-    this.comContactService.getShowComunityContacts().subscribe(
-res=> this.List=res,
-err=>console.log(err)
-)
+  //  this.comContactService.getShowComunityContacts().subscribe(
+///res=> this.List=res,
+//err=>console.log(err)
+//)
 
 
 }
@@ -27,16 +27,16 @@ err=>console.log(err)
 
   ngOnInit(): void {
     this.comContacts.ContactName="alberto";
-    this.comContacts.DoesSpeakSpanish=true;
+
     this.comContacts.PhoneNumber="00-3456644"
     //this.AddComunityContacts();
-    this.comContactService.getNumComunityContacts().subscribe(
-      res=> console.log('num contacts'+res),
-      err=>console.log(err)
+  //  this.comContactService.getNumComunityContacts().subscribe(
+   //   res=> console.log('num contacts'+res),
+   //   err=>console.log(err)
       
       
-    )
-    this.comContactService.getShowComunityContacts().subscribe((con:Array<ComunityContacts>)=> this.List=con)
+   // )
+  //  this.comContactService.getShowComunityContacts().subscribe((con:Array<Contacts>)=> this.List=con)
     //con push quizas
    // this.comContactService.getShowComunityContacts().subscribe((con:Array<ComunityContacts>)=> this.List.push(con.))
   // this.showContact();
@@ -64,11 +64,11 @@ err=>console.log(err)
    
 
 
-  AddComunityContacts(){
-    this.comContactService.AddComunityContacts(this.comContacts).subscribe(
-      res=>{console.log(res)},
-      err=>{console.log(err)}
-    )
-  }
+ // AddComunityContacts(){
+  //  this.comContactService.AddComunityContacts(this.comContacts).subscribe(
+  //    res=>{console.log(res)},
+  //    err=>{console.log(err)}
+  //  )
+ // }
   
 }

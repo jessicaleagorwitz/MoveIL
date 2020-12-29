@@ -14,11 +14,7 @@ namespace API.Controllers
     public class SectorController : ApiController
     {
        
-        public IHttpActionResult AddSector(SectorDTO com)
-        {
-            BL.SectorBL.AddSector(com);
-            return Ok();
-        }
+       
         //[Route("Sector"), HttpGet]
         //public IHttpActionResult Sector()
         //{

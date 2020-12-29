@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using DAL;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,26 @@ namespace BL
 {
   public class RecommendationBL
     {
-        public static void AddRecommendation(RecommendationDTO com)
+        //יצירת המלצה חדשה
+        public static bool AddRecommendation(RecommendationDTO com)
         {
             using (DAL.MoveilEntities db = new DAL.MoveilEntities())
             {
+               
                 db.Recommendations.Add(CONVERTERES.RecommendationConverters.RecommendationtoDal(com));
+                
                 db.SaveChanges();
+                return true;
+            }
+        }
+
+        //מציגה את המלצות
+        public static List<RecommendationDTO> getShowRecommendation()
+        {
+            using (MoveilEntities db = new MoveilEntities())
+            {
+               
+                return CONVERTERES.RecommendationConverters.ConvertRecommendationListToDTO(db.Recommendations.ToList().OrderBy(x => Guid.NewGuid()).Take(3).ToList());
             }
         }
     }

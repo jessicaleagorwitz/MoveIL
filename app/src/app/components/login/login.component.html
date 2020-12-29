@@ -78,28 +78,31 @@
     </div>
 </body>
 </html>
+aqui esta lo q va despues de loginform  (submit)="checkUser()"
 -->
 <div class="main">
-    <form [formGroup]="myform" >
-    <div class="form-group">
-        <label>user name: </label>   
-        <input type="text" class="form-control" formControlName="userName"> 
-        <div class="error" *ngIf="myform.controls['userName'].errors!=null">is required</div>
-    </div>
-    <div class="form-group">
-        <label>first Name: </label>
-        <input type="text" class="form-control" formControlName="firstName">
-        <div class="error" *ngIf="myform.controls['firstName'].errors!=null">is required</div>
- </div>
-    <div class="form-group">
-        <label>password: </label>
-        <input type="password" class="form-control" formControlName="password">
-        <div class="error" *ngIf="myform.controls['password'].errors!=null">is required</div>
- </div>
-    <div>
-        <input type="submit" class="btn btn-success" value="sign in">
-        <a [routerLink]="['/register']" class="btn btn-success">new user</a>
-    </div>
+    <form [formGroup]="loginForm" (submit)="checkUser()" >
+        <div class="form-group"> 
+            <label>Email </label>
+             <input type="text" class="form-control" formControlName="email">
+                <div class="error" *ngIf="loginForm.controls['email'].errors!=null"> se necesita</div>
+                </div>
+
+ <div class="form-group"> 
+     <label> Contraseña </label> 
+     <input type="password" class="form-control" formControlName="password">
+<div class="error" *ngIf="loginForm.controls['password'].errors!=null"> se necesita </div> 
+                </div>
+
+                <div> 
+                    <input type="submit" class="btn btn-success" value="Sign In">
+                    <br>
+                    <a [routerLink]="['/register']" class="btn btn-success" value=""> Nuevo usario </a>
+                </div>
+                <!--<input type="button" class="btn btn-primary" *ngIf="loggedIn" value="exit"(click)="logOut()">-->
+              
     </form>
-  
-</div>
+
+  <!--  <div class="error" *ngIf="failedMessage"> שם  משתמש או סיסמה שגויים /<div>-->
+
+    </div>

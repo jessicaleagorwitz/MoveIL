@@ -14,15 +14,20 @@ namespace DAL
     
     public partial class User
     {
-        public string UserName { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            this.Recommendations = new HashSet<Recommendation>();
+        }
+    
+        public int UserCode { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
-        public string PhoneNumber { get; set; }
-        public int CountryCode { get; set; }
         public string Email { get; set; }
-        public int UserCode { get; set; }
+        public string Country { get; set; }
     
-        public virtual Country Country { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Recommendation> Recommendations { get; set; }
     }
 }

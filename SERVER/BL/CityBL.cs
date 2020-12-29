@@ -14,17 +14,34 @@ namespace BL
         {
             using (DAL.MoveilEntities db = new DAL.MoveilEntities())
             {
-                db.Cities.Add(CONVERTERES.CityConverters.ConvertCitytoDal(com));
+                db.NewCities.Add(CONVERTERES.CityConverters.ConvertCitytoDal(com));
                 db.SaveChanges();
             }
         }
 
+        //מציגה את כל הערים
         public static List<CityDTO> getShowCity()
         {
             using (MoveilEntities db = new MoveilEntities())
             {
-                return CONVERTERES.CityConverters.ConvertCityListToDTO(db.Cities.ToList());
+                return CONVERTERES.CityConverters.ConvertCityListToDTO(db.NewCities.ToList());
             }
         }
+
+      
+        // מציגה עיר אחת לפי הקוד שלה
+        public static CityDTO getYourCity(int cityCode)
+        {
+            using (MoveilEntities db = new MoveilEntities())
+            {
+                //return CONVERTERES.CityConverters.ConvertCityToDTO(db.NewCities.Single(t => t.CityCode == cityCode));
+                return CONVERTERES.CityConverters.ConvertCityToDTO(db.NewCities.FirstOrDefault(t => t.CityCode == cityCode));
+
+            }
+        }
+
+       
+
+      
     }
 }

@@ -14,30 +14,18 @@ namespace DAL
     
     public partial class Comunity
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Comunity()
-        {
-            this.ComunityContacts = new HashSet<ComunityContact>();
-            this.ComunityContactsForCountries = new HashSet<ComunityContactsForCountry>();
-        }
-    
         public int ComunityCode { get; set; }
         public string ComunityName { get; set; }
         public int CityCode { get; set; }
-        public string NeighborhoodName { get; set; }
-        public string SinagogueName { get; set; }
-        public string Size { get; set; }
         public int SectorCode { get; set; }
-        public string PercentageOfPeople { get; set; }
-        public string Workers { get; set; }
-        public string MinAptPrice { get; set; }
-        public string MaxAptPrice { get; set; }
+        public int CostoCode { get; set; }
+        public bool anciano { get; set; }
+        public string About { get; set; }
+        public int RepresentanteCode { get; set; }
     
-        public virtual City City { get; set; }
+        public virtual NewCity NewCity { get; set; }
+        public virtual NewCosto NewCosto { get; set; }
+        public virtual Representante Representante { get; set; }
         public virtual Sector Sector { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ComunityContact> ComunityContacts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ComunityContactsForCountry> ComunityContactsForCountries { get; set; }
     }
 }

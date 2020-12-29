@@ -14,32 +14,32 @@ namespace API.Controllers
     [RoutePrefix("api/comunities")]
     public class ComunitiesController : ApiController
     {//esta es tipo get , get es brerat mejdal
-        [Route("getNumComunities")]
-        [HttpGet]
-        public IHttpActionResult getNumComunities()
+       
+        [Route("getComunities"), HttpPost]
+        public IHttpActionResult getComunity(PersonalStatusDTO per)
         {
-            return Ok(1);
+            return Ok(BL.ComunityBL.getComunity(per));
         }
-        //asi para recibir parametrim
-      //  [Route("b/{ComunityCode}")]
-       // public int b(int code)
-       // {
-       //     return code;
-      //  }
-        //tipo post
+
+
         [Route(" AddComunity"), HttpPost]
         public IHttpActionResult AddComunity(ComunityDTO com)
         {
             BL.ComunityBL.AddComunity(com);
             return Ok(true);
         }
+        [Route("getYourComunity"), HttpPost]
+        public IHttpActionResult getYourComunity(int code)
+        {
+            return Ok(BL.ComunityBL.getYourComunity(code));
+        }
+        [Route("getRepresentante"), HttpPost]
+        public IHttpActionResult getRepresentante(int code)
+        {
+            return Ok(BL.ComunityBL.getRepresentante(code));
+        }
 
-        //[Route("Comunity"), HttpGet]
-        //public IHttpActionResult Comunity()
-        //{
-        //    BL.ComunityBL.Comunity();
-        //    return Ok(true);
-        //}
+       
 
     }
 }

@@ -10,29 +10,45 @@ namespace BL.CONVERTERES
 {
    public class CityConverters
     {
-        public static City ConvertCitytoDal(CityDTO city)
+        public static NewCity ConvertCitytoDal(CityDTO city)
         {
-            return new  City
+            return new  NewCity
             {
-               CityCode= city.CityCode,
-               CityName= city.CityName
+                CityCode = city.CityCode,
+                CityName = city.CityName,
+               AboutCity=city.AboutCity ,
+               AlquilerAfueras=city.AlquilerAfueras ,
+               AlquilerCentro=city.AlquilerCentro,
+               DistritoCode=city.DistritoCode,
+                Poblacion= city.Poblacion ,
+                SalarioMinimo=city.SalarioMinimo ,
+                
             };
         }
-        public static CityDTO ConvertCityToDTO(City city)
+        public static CityDTO ConvertCityToDTO(NewCity city)
         {
             return new CityDTO
             {
-                CityCode = city.CityCode,
-                CityName = city.CityName
+                CityCode=city.CityCode,
+                CityName = city.CityName,
+                AboutCity = city.AboutCity,
+                AlquilerAfueras = city.AlquilerAfueras,
+                AlquilerCentro = city.AlquilerCentro,
+                DistritoCode = city.DistritoCode,
+                Poblacion = city.Poblacion,
+                SalarioMinimo = city.SalarioMinimo,
             };
         }
 
+     
 
-       public static List<CityDTO> ConvertCityListToDTO(List<City> list)
+        public static List<CityDTO> ConvertCityListToDTO(List<NewCity> list)
         {
            
                 return list.Select(p => ConvertCityToDTO(p)).ToList();
             
         }
+
+       
     }
 }

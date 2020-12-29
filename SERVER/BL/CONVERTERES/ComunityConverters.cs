@@ -17,15 +17,40 @@ namespace BL.CONVERTERES
                 ComunityCode = com.ComunityCode,
                 ComunityName = com.ComunityName,
                 CityCode = com.CityCode,
-                NeighborhoodName = com.NeighborhoodName,
-                SinagogueName = com.SinagogueName,
-                Size = com.Size,
+                
                 SectorCode = com.SectorCode,
-                PercentageOfPeople = com.PercentageOfPeople,
-                Workers = com.Workers,
-                MinAptPrice = com.MinAptPrice,
-                MaxAptPrice = com.MaxAptPrice
+                CostoCode= com.CostoCode,
+                anciano=com.anciano,
+                About=com.About ,
+                RepresentanteCode=com.RepresentanteCode
+               
             };
         }
+        public static ComunityDTO ConvertComunityToDTO(Comunity com)
+        {
+            return new ComunityDTO
+            {
+                ComunityCode = com.ComunityCode,
+                ComunityName = com.ComunityName,
+                CityCode = com.CityCode,
+
+                SectorCode = com.SectorCode,
+                CostoCode = com.CostoCode,
+                anciano = com.anciano,
+                About = com.About,
+                RepresentanteCode = com.RepresentanteCode
+            };
+        }
+
+
+
+        public static List<ComunityDTO> ConvertComunityListToDTO(List<Comunity> list)
+        {
+
+            return list.Select(p => ConvertComunityToDTO(p)).ToList();
+
+        }
+        
+
     }
 }

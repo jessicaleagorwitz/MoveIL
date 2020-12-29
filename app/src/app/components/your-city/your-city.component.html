@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+       
+    <div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+        <h1 class="display-3" style="font-size: 90px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >-->{{MyCity.CityName}}</h1></div>
+ 
+    <div class="media">
+        <img src="../../../../assets/{{MyCity.CityCode}}.jpg" class="mr-3 rounded img-thumbnail" alt="Sample Image" style="height: 500px; width: 700px; margin: 20px;">
+        <div class="media-body">
+    
+            
+            <br>
+            <br>
+            <h3 class="mt-0">Poblacion: {{MyCity.Poblacion}} </h3>
+            <br>
+            
+            
+           
+          
+            <h3 class="mt-0">Salario minimo: {{MyCity.SalarioMinimo }}  </h3>
+            <br>
+            <h3 class="mt-0">Alquiler mensual en el centro: {{MyCity.AlquilerCentro}}  </h3>
+            <br>
+            <h3 class="mt-0">Alquiler mensual en las afueras: {{MyCity.AlquilerAfueras}}  </h3>
+            <br>
+           
+            <button mdbBtn color="green" class="waves-light" type="button" (click)="test.toggle()" mdbWavesEffect>
+              About
+              </button>
+              
+              <div class="" mdbCollapse #test="bs-collapse">
+                <p>{{MyCity.AboutCity}}</p>
+              </div>
+        
+    </div>
+</div>
+
+<div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+  <h1 class="display-3" style="font-size: 70px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Contactos en {{MyCity.CityName}}</h1></div>
+<!-- Card -->
+<div *ngFor="let q of contacts">
+<div class="card">
+
+    <!-- Card image 
+    <img class="card-img-top" src="../../../assets/rec/{{q. ContactCode}}" style="width: 300px; height: 300px;" alt="Card image cap">
+  -->
+    <!-- Card content -->
+    <div class="card-body">
+  
+      <!-- Title
+     ContactName :string
+     PhoneNumber:string
+  
+      Email :string
+      Aboutme :string
+     Country :string -->
+      <h4 class="card-title" style="font-size: 30px;"><a>{{q.ContactName}}</a></h4>
+      <!-- Text -->
+      <p class="card-text">numero:{{q.PhoneNumber}} <br>mail: {{q.Email}} <br>sobre mi: {{q.Aboutme}} <br> naci en: {{q.Country}} </p>
+      <!-- Button -->
+      
+  
+    </div>
+  
+  </div>
+</div>
+  <!-- Card -->
+</body>
+</html>

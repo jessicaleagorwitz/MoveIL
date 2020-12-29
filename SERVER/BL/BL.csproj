@@ -52,25 +52,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityBL.cs" />
+    <Compile Include="CONVERTERES\RepresentanteConverter.cs" />
     <Compile Include="CONVERTERES\UserConverters.cs" />
+    <Compile Include="RepresentanteBL.cs" />
     <Compile Include="SectorBL.cs" />
     <Compile Include="ComunityBL.cs" />
-    <Compile Include="ComunityContactsBL.cs" />
-    <Compile Include="ComunityContactsForCountryBL.cs" />
+    <Compile Include="ContactBL.cs" />
+    <Compile Include="DistritoBL.cs" />
     <Compile Include="CONVERTERES\CityConverters.cs" />
-    <Compile Include="CONVERTERES\ComunityContactsConverters.cs" />
-    <Compile Include="CONVERTERES\ComunityContactsForCountryConverters.cs" />
+    <Compile Include="CONVERTERES\ContactsConverters.cs" />
     <Compile Include="CONVERTERES\ComunityConverters.cs" />
-    <Compile Include="CONVERTERES\CountryConverters.cs" />
-    <Compile Include="CONVERTERES\PlaceOfStudyConverters.cs" />
-    <Compile Include="CONVERTERES\ProfessionsConverters.cs" />
-    <Compile Include="CONVERTERES\ProfessionsForPlaceToStudyConverters.cs" />
+    <Compile Include="CONVERTERES\DistritoConverters.cs" />
+    <Compile Include="CONVERTERES\CostoConverters.cs" />
     <Compile Include="CONVERTERES\RecommendationConverters.cs" />
     <Compile Include="CONVERTERES\SectorConverters.cs" />
-    <Compile Include="CountryBL.cs" />
-    <Compile Include="PlaceOfStudyBL.cs" />
-    <Compile Include="ProfessionsBL.cs" />
-    <Compile Include="ProfessionsForPlaceToStudyBL.cs" />
+    <Compile Include="CostoBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecommendationBL.cs" />
     <Compile Include="UserBL.cs" />

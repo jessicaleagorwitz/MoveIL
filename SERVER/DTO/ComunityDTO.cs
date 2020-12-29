@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    public class ComunityDTO
+   public class ComunityDTO
     {
         public int ComunityCode { get; set; }
         public string ComunityName { get; set; }
         public int CityCode { get; set; }
-        public string NeighborhoodName { get; set; }
-        public string SinagogueName { get; set; }
-        public string Size { get; set; }
         public int SectorCode { get; set; }
-        public string PercentageOfPeople { get; set; }
-        public string Workers { get; set; }
-        public string MinAptPrice { get; set; }
-        public string MaxAptPrice { get; set; }
+        public int CostoCode { get; set; }
 
+        public bool anciano { get; set; }
+        public string About { get; set; }
+        public int RepresentanteCode { get; set; }
     }
 }

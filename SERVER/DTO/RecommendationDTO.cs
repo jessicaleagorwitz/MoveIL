@@ -9,7 +9,7 @@ namespace DTO
    public class RecommendationDTO
     {
         public int RecommendationCode { get; set; }
-        public int ContactCode { get; set; }
+        public int UserCode { get; set; }
         public string FreeDescription { get; set; }
     }
 }

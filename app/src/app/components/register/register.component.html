@@ -1,0 +1,48 @@
+<div class="main">
+    <form [formGroup]="myform" (submit)="AddUser()">
+   <div class="form-group">
+    <label>Email: </label>
+    <input type="text" class="form-control" formControlName="email">
+    <ul class="error" *ngIf="myform.controls['email'].errors!=null">
+ </ul>
+</div>
+    <div class="form-group">
+        <label>First Name: </label>
+        <input type="text" class="form-control" formControlName="firstName">
+        <div class="error" *ngIf="myform.controls['firstName'].errors!=null"></div>
+ </div>
+ <div class="form-group">
+    <label>Last Name: </label>
+    <input type="text" class="form-control" formControlName="lastName">
+    <div class="error" *ngIf="myform.controls['lastName'].errors!=null"></div>
+</div>
+<div class="form-group">
+    <label>Country: </label>
+    <input type="text" class="form-control" formControlName="country">
+    <div class="error" *ngIf="myform.controls['country'].errors!=null"></div>
+</div>
+<div class="form-group">
+    <label>Telephone </label>
+    <input type="text" class="form-control" formControlName="telephone">
+    <div class="error" *ngIf="myform.controls['telephone'].errors!=null"></div>
+</div>
+    <div class="form-group">
+        <label>Password: </label>
+        <input type="password" class="form-control" formControlName="password">
+        <div class="error" *ngIf="myform.controls['password'].errors!=null"></div>
+ </div>
+ <div class="form-group">
+    <label>confirm password: </label>
+    <input type="password" class="form-control" formControlName="confirm">
+    <div class="error" *ngIf="myform.controls['confirm'].errors!=null">is required</div>
+    <div class="error" *ngIf="myform.errors?.passwordError!=null">{{myform.errors.passwordError}}</div>
+</div>
+ 
+
+    <div>
+        <input type="submit" class="btn btn-success" value="sign in">
+        <!--<a [routerLink]="['/register']" class="btn btn-success">new user</a>-->
+    </div>
+</form>
+  
+</div>

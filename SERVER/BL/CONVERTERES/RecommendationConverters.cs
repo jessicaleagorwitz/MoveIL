@@ -15,10 +15,29 @@ namespace BL.CONVERTERES
             return new Recommendation
             {
                 RecommendationCode=com.RecommendationCode,
-                ContactCode=com.ContactCode,
+               UserCode=com.UserCode,
                 FreeDescription=com.FreeDescription
 
             };
+        }
+
+        public static RecommendationDTO ConvertRecommendationToDTO(Recommendation com)
+        {
+            return new RecommendationDTO
+            {
+                RecommendationCode = com.RecommendationCode,
+                UserCode = com.UserCode,
+                FreeDescription = com.FreeDescription
+            };
+        }
+
+
+
+        public static List<RecommendationDTO> ConvertRecommendationListToDTO(List<Recommendation> list)
+        {
+
+            return list.Select(p => ConvertRecommendationToDTO(p)).ToList();
+
         }
     }
 }

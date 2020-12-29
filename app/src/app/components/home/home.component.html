@@ -4,36 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+   
+   </head>
 <body>
-    <h2> Welcome to Moveil</h2>
-    <img src="./../../../assets/kotel.jpg" class="img-rounded" alt="Muro de los lamentos" width="304" height="236">
-    <div>
-        <div *ngFor="let q of List">
-            <div class="questionview">
-                <div class="rightside">
-                    <div class="square">
-                        <strong>{{q.ContactName}}</strong> 
-                    </div>
-                    
-                </div>
+<!--<div class="main">
+    <div class="bs-example">
+        <h1 class="display-3" style="text-align: center;">Bienvenidos a casa!</h1>
+<h4  style="text-align: center;"> Israel es tanto un país como un pueblo.<br>
+     La historia del pueblo judío y sus raíces en la Tierra de Israel se extienden a lo largo de 35 siglos. <br>En esta tierra se forjó su identidad nacional, religiosa y cultural; <br>aquí se ha hecho realidad su presencia física en forma constante a través de los siglos, <br>aún después que la mayoría del pueblo judío se viera forzada a exiliarse. <br>Con el establecimiento del Estado de Israel en 1948, la soberanía judía, perdida casi 2000 años antes, quedó renovada.
+</h4>
+
+    </div>-->
+
     
-                <div class="fill">
-                    <h4> Address {{q.Address}}</h4>
-    
-    
-    
-                    <div class="left">
-                        <div> phone {{q.PhoneNumber}}</div>
-                        <div> birth date {{q.BirthDate}}</div>
-                    </div>
-                    <div>
-                        <div> <span class="tag"> Year of alia {{q.YearOfAlia}} </span> </div>
-                    </div>
-                </div>
+
+        <div class="main container-fluid text-center ">
+  
+          <!--Card-->
+          <div class="card card-cascade wider reverse my-4 pb-5 ">
+  
+            <!--Card image
+            <div class="view view-cascade overlay wow fadeIn">
+              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(1).jpg" class="img-fluid">
+              <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>-->
+            <div class="bs-example">
+                <!-- <h3 class="display-3" style="background-color: rgb(121, 218, 137);">Ciudades en Isreal</h3>
+           -->  
+           <div class='container-fluid'> </div> 
+             
+                 <div class='col-12 ' >  
+                     <ngb-carousel class="center" style="width: 850px; height: 450px; padding-left: 1px; padding-right: 1px; display: block; margin-left: auto; margin-right: auto; " >  
+                         <ng-template ngbSlide>  
+                             <img src="../../../assets/33.jpg"  alt="Delhi Metro" style="width: 850px; height: 450px;">  
+                             <div class="carousel-caption">  
+                                 <h3 style="color: white">Jerusalem</h3>
+                             </div>  
+                         </ng-template>  
+                         <ng-template ngbSlide>  
+                             <img class="center-block" src="../../../assets/16.jpg"   alt="Bangalore Metro" style="width: 950px; height: 450px;">  
+                             <div class="carousel-caption">  
+                                 <h3 style="color: white">Givat shemuel</h3>  
+                             </div>  
+                         </ng-template>  
+                         <ng-template ngbSlide>  
+                             <img src="../../../assets/3.jpg"  alt="Channai Metro" style="width: 950px; height: 450px;">  
+                             <div class="carousel-caption">  
+                                 <h3 style="color: black">Eilat</h3>  
+                             </div>  
+                         </ng-template>  
+                         <ng-template ngbSlide>  
+                             <img src="../../../assets/dimona.jpg"  alt="Jaipur Metro" style="width: 950px; height: 450px;">  
+                             <div class="carousel-caption">  
+                                 <h3 style="color: black">Dimona</h3>  
+                             </div>  
+                         </ng-template>  
+                         <ng-template ngbSlide>  
+                             <img src="../../../assets/15.jpg"   alt="Mumbai Metro" style="width: 950px; height: 450px;" [routerLink]="['/ashdod']" >  
+                             <div class="carousel-caption">  
+                                 <h3 style="color: white">Bnei Brak</h3>  
+                             </div>  
+                         </ng-template>  
+                     </ngb-carousel>  
+                 </div>  
+               
+             </div>  
+            
+            <!--/Card image-->
+  
+            <!--Card content-->
+            <div class="card-body card-body-cascade text-center wow fadeIn" data-wow-delay="0.2s">
+              <!--Title-->
+              <h4 class="card-title" style="font-size: 60px;"><strong>Bienvenidos</strong></h4>
+              <!--<h5 class="blue-text"><strong>Photography</strong></h5>-->
+  
+              <p class="card-text">Israel es tanto un país como un pueblo.<br>
+                La historia del pueblo judío y sus raíces en la Tierra de Israel se extienden a lo largo de 35 siglos. <br>En esta tierra se forjó su identidad nacional, religiosa y cultural; <br>aquí se ha hecho realidad su presencia física en forma constante a través de los siglos, <br>aún después que la mayoría del pueblo judío se viera forzada a exiliarse. <br>Con el establecimiento del Estado de Israel en 1948, la soberanía judía, perdida casi 2000 años antes, quedó renovada.
+           
+              </p>
+  
+              <a class="btn btn-success btn-lg" [routerLink]="['/citys']">Ciudades</a>
+              <a class="btn btn-success btn-lg" [routerLink]="['/search']">Mi Comunidad</a>
+              
             </div>
-            <hr>    
-         </div> 
+            <!--/.Card content-->
+  
+          </div>
+          <!--/.Card-->
+  
         </div>
+  
+     
+      <!--/Main layout-->
+
+   
+   
+ <div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+        <h1 class="display-3" style="font-size: 50px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >
+            Experiencias...<button type="button" class="btn btn-light" [routerLink]="['/recomendation']">Anadir Experiencia</button></h1>
+</div>
+      
+
+   <!-- <div *ngFor="let q of List"> 
+       
+      
+        <div class="bs-example">
+            <div class="media">
+               <h4>{{q.user.FirstName}} </h4>
+                    <br>
+                    <h6> {{q.user.Email}}</h6>
+                    <br>
+                    <p> {{q.FreeDescription}}</p>
+            </div>
+     </div>
+    </div>-->
+
+
+<div class="main">
+<div *ngFor="let q of List">
+<div class="card dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+    <div class="card-body">
+      <h1 class="card-title">{{q.user.FirstName}} {{q.user.LastName}}</h1>
+      <h2 class="card-title">Naci en: {{q.user.Country}}</h2>
+      <p class="card-text">{{q.FreeDescription}}</p>
+      <a class="card-link">cualquier duda: {{q.user.Email}}</a>
+      <br>
+    </div>
+  </div>
+  </div> 
+  </div>
+   
+ <!-- <div class='col-12 '>  
+    <ngb-carousel class="center" style="width: 850px; height: 450px; padding-left: 1px; padding-right: 1px; display: block; margin-left: auto; margin-right: auto; " >  
+        <div *ngFor="let q of List">
+        <ng-template ngbSlide>  
+            <img src="../../../assets/blanco.jpg"  alt="Delhi Metro" style="width: 850px; height: 450px;">  
+            <div class="carousel-caption">  
+                <h3 style="color: white">{{q.user.FirstName}} {{q.user.LastName}}</h3>
+            </div>  
+        </ng-template> 
+        </div> 
+    </ngb-carousel>  
+</div>  -->
+
+
 </body>
 </html>

@@ -3,6 +3,8 @@ import {HttpClientModule, HttpClient} from '@angular/common/http'
 import { Comunity } from '../models/Comunity.model';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { PersonalStatus } from '../models/PersonalStatus.model';
+import { Representante } from '../models/Representante';
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +18,20 @@ export class ComunityService {
     //enviroment es global
 return this.http.post<boolean>(environment.url+ 'comunities/AddComunity', com)
   }
-
- getNumComunities():Observable<number>
+//serach your comunity
+  getComunity(personal:PersonalStatus):Observable<Comunity[]>
   {
-return this.http.get<number>(environment.url+ 'comunities/getNumComunities');
+    console.log(personal);
+    
+return this.http.post<Comunity[]>(environment.url+'comunities/getComunities',personal);
   }
+// get your comunity 
+getYourComunity(code):Observable<Comunity>
+{ 
+return this.http.post<Comunity>(environment.url+'comunities/getYourComunity',parseInt(code));
+}
+getRepresentante(code):Observable<Representante>
+{
+  return this.http.post<Representante>(environment.url+'comunities/getRepresentante',parseInt(code));
+}
 }

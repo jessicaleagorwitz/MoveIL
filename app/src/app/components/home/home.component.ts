@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ComunityContacts } from 'src/app/shared/models/ComunityContacts.model';
+import { City } from 'src/app/shared/models/City.model';
+import { Contacts } from 'src/app/shared/models/Contacts.model';
+import { Recommendation } from 'src/app/shared/models/Recommendation.model';
+import { User } from 'src/app/shared/models/User.model';
 import { ComunityContactsService } from 'src/app/shared/services/comunity-contacts.service';
 
 @Component({
@@ -8,62 +11,72 @@ import { ComunityContactsService } from 'src/app/shared/services/comunity-contac
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  comContacts: ComunityContacts= new ComunityContacts();
-  List: Array<ComunityContacts>
+  
+  List: Recommendation[]
+  ListRan: Recommendation[]
+user:User[]
+u:User
+name;
+lastname;
+email;
+code;
+ 
+ 
   constructor(private comContactService: ComunityContactsService) { 
-    this.comContactService.getShowComunityContacts().subscribe(
-      res=> this.List=res,
-      err=>console.log(err)
+  //  this.comContactService.getShowComunityContacts().subscribe(
+   //   res=> this.List=res,
+   //   err=>console.log(err)
+   //   )
+      this.comContactService.getRecomendations().subscribe(
+        res=>{this.List=res 
+          console.log(this.List);
+          
+          this.List.forEach(q=> this.comContactService.getUserCode(q.UserCode).subscribe(
+            res=> {q.user=res
+              console.log(this.List);
+              
+            }
+          ))
+        },
+        err=> console.log(err)
+        
       )
-      
+   //   this.ListRan= this.List.
       
   }
 
   ngOnInit(): void {
-    this.comContacts.ContactName="alberto";
-    this.comContacts.DoesSpeakSpanish=true;
-    this.comContacts.PhoneNumber="00-3456644"
-    //this.AddComunityContacts();
-    this.comContactService.getNumComunityContacts().subscribe(
-      res=> console.log('num contacts'+res),
-      err=>console.log(err)
-      
-      
-    )
-    this.comContactService.getShowComunityContacts().subscribe((con:Array<ComunityContacts>)=> this.List=con)
-    //con push quizas
-   // this.comContactService.getShowComunityContacts().subscribe((con:Array<ComunityContacts>)=> this.List.push(con.))
-  // this.showContact();
-  }
- // showContact() {
-  //  this.comContactService.getShowComunityContacts()
-   //   .subscribe((con: Array<ComunityContacts>)=> 
-    //  this.contactList={
-    //   ComunityCode : con.ComunityCode,
-     //   ContactName:con.ContactName,
-      //  Address:con.Address,
-      //  BirthDate:con.BirthDate,
-       // ContactCode:con.ContactCode,
-       // DoesSpeakSpanish:con.DoesSpeakSpanish,
-       // FamilyStatus:con.FamilyStatus,
-       // PhoneNumber:con.PhoneNumber,
-       // ProfessionCode:con.ProfessionCode,
-       // SectorCode:con.SectorCode,
-       // YearOfAlia:con.YearOfAlia
-    //  }
-
-    //  )
-  
-   // }
+    
+   this.comContactService.getUser().subscribe(
+     res=> this.user=res,
+     err=> console.log(err)
+     
+   )
+   for (var i = 0; i < this.List.length; i++) {
+    this.comContactService.getUserCode(this.List[i].UserCode).subscribe(
+      res=> {this.name=res.FirstName;
+      this.lastname=res.LastName;
+      this.email=res.Email;
+      this.code= res.UserCode;
+    }
+     
+      )
+}
+   console.log(this.user);
    
-
-
-  AddComunityContacts(){
-    this.comContactService.AddComunityContacts(this.comContacts).subscribe(
-      res=>{console.log(res)},
-      err=>{console.log(err)}
-    )
+    //this.AddComunityContacts();
+  //  this.comContactService.getNumComunityContacts().subscribe(
+   //   res=> console.log('num contacts'+res),
+    //  err=>console.log(err)
+    //   )
+  //  this.comContactService.getShowComunityContacts().subscribe((con:Array<ComunityContacts>)=>{ this.List=con; console.log(this.List)})
+    
+    //con push quizas
+  // this.comContactService.getShowComunityContacts().subscribe((con:Array<ComunityContacts>)=> this.List.push(con.))
+   //this.showContact();
   }
+ 
+
   
   
 

@@ -1,5 +1,8 @@
+import { User } from './User.model'
+
 export class  Recommendation{
     RecommendationCode: number
-    ContactCode: number
+    UserCode: number
     FreeDescription: string
+    user: User
 }

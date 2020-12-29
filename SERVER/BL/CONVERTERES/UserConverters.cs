@@ -14,16 +14,37 @@ namespace BL.CONVERTERES
         {
             return new User
             {
-               UserName=com.UserName,
+               UserCode=com.UserCode,
                FirstName=com.FirstName,
                LastName=com.LastName,
                Password=com.Password,
-               PhoneNumber=com.PhoneNumber,
-               CountryCode=com.CountryCode,
+              
+               Country=com.Country,
                Email=com.Email
 
 
             };
+        }
+        public static UserDTO ConvertUserToDTO(User com)
+        {
+            return new UserDTO
+            {
+                UserCode = com.UserCode,
+                FirstName = com.FirstName,
+                LastName = com.LastName,
+                Password = com.Password,
+
+                Country = com.Country,
+                Email = com.Email
+            };
+        }
+
+
+
+        public static List<UserDTO> ConvertUserListToDTO(List<User> list)
+        {
+            return list.Select(p => ConvertUserToDTO(p)).ToList();
+
         }
     }
 }

@@ -10,14 +10,7 @@ namespace BL
 {
     public class SectorBL
     {
-        public static void AddSector(SectorDTO com)
-        {
-            using (DAL.MoveilEntities db = new DAL.MoveilEntities())
-            {
-                db.Sectors.Add(CONVERTERES.SectorConverters.SectortoDal(com));
-                db.SaveChanges();
-            }
-        }
+        
        
     }
 }

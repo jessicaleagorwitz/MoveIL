@@ -42,15 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityDTO.cs" />
-    <Compile Include="ComunityContactsDTO.cs" />
-    <Compile Include="ComunityContactsForCountryDTO.cs" />
     <Compile Include="ComunityDTO.cs" />
-    <Compile Include="CountryDTO.cs" />
-    <Compile Include="PlacesOfStudyDTO.cs" />
-    <Compile Include="ProfessionsDTO.cs" />
-    <Compile Include="ProfessionsForPlaceToStudyDTO.cs" />
+    <Compile Include="ContactDTO.cs" />
+    <Compile Include="CostoDTO.cs" />
+    <Compile Include="DistritoDTO.cs" />
+    <Compile Include="LoginDTO.cs" />
+    <Compile Include="PersonalStatusDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecommendationDTO.cs" />
+    <Compile Include="RepresentanteDTO.cs" />
     <Compile Include="SectorDTO.cs" />
     <Compile Include="UserDTO.cs" />
   </ItemGroup>

@@ -99,12 +99,11 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CityController.cs" />
-    <Compile Include="Controllers\ComunityContactsController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\ComunitiesController.cs" />
-    <Compile Include="Controllers\ComunityContactsForCountryController.cs" />
-    <Compile Include="Controllers\CountryController.cs" />
-    <Compile Include="Controllers\PlaceOfStudyController.cs" />
-    <Compile Include="Controllers\ProfessionsForPlaceToStudyController.cs" />
+    <Compile Include="Controllers\RepresentanteController.cs" />
+    <Compile Include="Controllers\CostoController.cs" />
+    <Compile Include="Controllers\DistritoController.cs" />
     <Compile Include="Controllers\RecommendationController.cs" />
     <Compile Include="Controllers\SectorController.cs" />
     <Compile Include="Controllers\UserController.cs" />

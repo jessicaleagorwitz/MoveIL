@@ -1,1 +1,49 @@
-<p>add-comunity works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+        <h1 class="display-3" style="font-size: 90px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >~{{comunity.ComunityName}}~</h1></div>
+ 
+    <div class="media">
+        
+        <div class="media-body">
+    
+            
+            <br>
+            <br>
+           <h3>{{comunity.About}}</h3>
+           
+           
+              
+             
+                <p>La comunidad de encunetra en la ciudad de: {{city.CityName}}</p>
+             
+        
+    </div>
+</div>
+
+<div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+  <h1 class="display-3" style="font-size: 40px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >El representante de {{comunity.ComunityName}}</h1></div>
+<!-- Card -->
+
+
+   
+    <div class="card-body">
+  
+        <img src="../../../../assets/rec/{{representante.RepresentanteCode}}.jpg" class="mr-3 rounded img-thumbnail" alt="Sample Image" style="height: 300px; width: 500px; margin: 20px;">
+      <h4 class="card-title" style="font-size: 30px;"><a>{{representante.Name}}</a></h4>
+      <!-- Text -->
+      <p class="card-text">numero:{{representante.PhoneNumber}} <br>mail: {{representante.Email}}  </p>
+      <!-- Button -->
+      
+  
+    </div>
+  
+ 
+</body>
+</html>

@@ -15,9 +15,9 @@ namespace DAL
     public partial class Recommendation
     {
         public int RecommendationCode { get; set; }
-        public int ContactCode { get; set; }
+        public int UserCode { get; set; }
         public string FreeDescription { get; set; }
     
-        public virtual ComunityContact ComunityContact { get; set; }
+        public virtual User User { get; set; }
     }
 }

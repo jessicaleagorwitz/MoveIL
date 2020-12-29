@@ -18,8 +18,6 @@ namespace DAL
         public Sector()
         {
             this.Comunities = new HashSet<Comunity>();
-            this.ComunityContacts = new HashSet<ComunityContact>();
-            this.PlacesOfStudies = new HashSet<PlacesOfStudy>();
         }
     
         public int SectorCode { get; set; }
@@ -27,9 +25,5 @@ namespace DAL
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comunity> Comunities { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ComunityContact> ComunityContacts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlacesOfStudy> PlacesOfStudies { get; set; }
     }
 }

@@ -3,6 +3,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http'
 import { City } from '../models/City.model';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { Contacts } from '../models/Contacts.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,4 +17,21 @@ export class CityService {
   {
  return this.http.post<boolean>(environment.url+'City/addCity',city)
   }
+  //cities
+  getShowCity():Observable<City[]>{
+    return this.http.get<City[]>(environment.url+'City/getShowCity')
+  }
+  //cities
+  getYourCity(cityCode):Observable<City>{
+    return this.http.post<City>(environment.url+'City/getYourCity',parseInt(cityCode)) 
+  }
+  //your city
+  getContacts(cityCode):Observable<Contacts[]>{
+    return this.http.post<Contacts[]>(environment.url+'Contacts/getContacts',parseInt(cityCode)) 
+  }
+  //city
+  SearchCity(cityName):Observable<City>{
+    return this.http.post<City>(environment.url+'City/getSearchCity',cityName) 
+  }
+  
 }
