@@ -29,17 +29,20 @@ namespace API.Controllers
             return Ok(true);
         }
         [Route("getYourComunity"), HttpPost]
-        public IHttpActionResult getYourComunity(int code)
+        public IHttpActionResult getYourComunity([FromBody]int code)
         {
             return Ok(BL.ComunityBL.getYourComunity(code));
         }
         [Route("getRepresentante"), HttpPost]
-        public IHttpActionResult getRepresentante(int code)
+        public IHttpActionResult getRepresentante([FromBody]int code)
         {
             return Ok(BL.ComunityBL.getRepresentante(code));
         }
-
-       
-
+        [Route("getSector"), HttpPost]
+        public IHttpActionResult getSector([FromBody]int code)
+        {
+            return Ok(BL.SectorBL.getSector(code));
+        }
+        
     }
 }

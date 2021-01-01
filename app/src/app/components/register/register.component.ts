@@ -28,9 +28,8 @@ export class RegisterComponent implements OnInit {
       lastName: new FormControl('',Validators.compose([Validators.required,  Validators.pattern('^[a-z ]*')])),
       telephone: new FormControl('',Validators.compose([Validators.required, Validators.pattern('^[1-9 ]*')])),
       password: new FormControl('',Validators.required),
-      country:new FormControl('',Validators.required),
-      confirm: new FormControl('', Validators.required)
-    },{validators:PasswordValidator('password','confirm')})
+      country:new FormControl('',Validators.required) 
+    })
 
    
    
@@ -39,8 +38,8 @@ export class RegisterComponent implements OnInit {
  }
   AddUser(){
     console.log("hola");
-    //if(this.myform.valid)
-    //{
+    if(this.myform.valid)
+    {
      
       
       const u = new User();
@@ -61,7 +60,11 @@ export class RegisterComponent implements OnInit {
     },
   err=>{console.log(err)}
    )
-  //}
+  }
+  else{
+    alert("rellenar el register")
+    
+  }
 }
   
 }

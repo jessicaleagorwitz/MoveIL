@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
+import { AddComunityContactsComponent } from './components/add-comunity-contacts/add-comunity-contacts.component';
 import { AddComunityComponent } from './components/add-comunity/add-comunity.component';
 import { AliaComponent } from './components/alia/alia.component';
 
@@ -30,6 +31,8 @@ const routes: Routes = [
     {path: 'alia', component: AliaComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'yourCity/:code', component: YourCityComponent},
+    {path: 'add-comunity/:code', component: AddComunityComponent},
+    {path: 'add-comunity-contacts', component: AddComunityContactsComponent},
     {path: '', redirectTo:'/home', pathMatch:'full'},
   // {path: '**' , component: ErrorComponent},
   ];

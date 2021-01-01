@@ -4,6 +4,7 @@ import { Contacts } from 'src/app/shared/models/Contacts.model';
 import { Recommendation } from 'src/app/shared/models/Recommendation.model';
 import { User } from 'src/app/shared/models/User.model';
 import { ComunityContactsService } from 'src/app/shared/services/comunity-contacts.service';
+import { LoginService } from 'src/app/shared/services/login.service';
 
 @Component({
   selector: 'app-home',
@@ -16,13 +17,11 @@ export class HomeComponent implements OnInit {
   ListRan: Recommendation[]
 user:User[]
 u:User
-name;
-lastname;
-email;
-code;
+name: User;
+
  
  
-  constructor(private comContactService: ComunityContactsService) { 
+  constructor(private comContactService: ComunityContactsService, private LoginService: LoginService) { 
   //  this.comContactService.getShowComunityContacts().subscribe(
    //   res=> this.List=res,
    //   err=>console.log(err)
@@ -42,7 +41,7 @@ code;
         
       )
    //   this.ListRan= this.List.
-      
+    
   }
 
   ngOnInit(): void {
@@ -54,13 +53,8 @@ code;
    )
    for (var i = 0; i < this.List.length; i++) {
     this.comContactService.getUserCode(this.List[i].UserCode).subscribe(
-      res=> {this.name=res.FirstName;
-      this.lastname=res.LastName;
-      this.email=res.Email;
-      this.code= res.UserCode;
-    }
-     
-      )
+      res=>console.log(res)
+)
 }
    console.log(this.user);
    

@@ -34,7 +34,7 @@ namespace BL
             using (MoveilEntities db = new MoveilEntities())
             {
 
-                return CONVERTERES.ContactsConverters.ConvertContactsListToDTO(db.NewContacts.Where(t => t.CityCode == cityCode).ToList());
+                return CONVERTERES.ContactsConverters.ConvertContactsListToDTO(db.NewContacts.Where(t => t.CityCode == cityCode).ToList().OrderBy(x => Guid.NewGuid()).Take(2).ToList());
 
             }
         }

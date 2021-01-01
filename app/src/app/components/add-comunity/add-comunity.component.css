@@ -11,3 +11,8 @@
   .person:hover {
     border-color: #f1f1f1;
   }
+  .main{    
+    width: 1500px;  
+      margin: auto; 
+
+} 

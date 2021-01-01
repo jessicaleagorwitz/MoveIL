@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { City } from 'src/app/shared/models/City.model';
 import { Contacts } from 'src/app/shared/models/Contacts.model';
+import { CityService } from 'src/app/shared/services/city.service';
 import { ComunityContactsService } from 'src/app/shared/services/comunity-contacts.service';
 
 @Component({
@@ -10,14 +12,18 @@ import { ComunityContactsService } from 'src/app/shared/services/comunity-contac
 export class AddComunityContactsComponent implements OnInit {
 comContacts: Contacts= new Contacts();
 contactList; //Array<ComunityContacts> = new Array<ComunityContacts>();
-
+allCities: City[]
 List: Array<Contacts>
-  constructor(private comContactService: ComunityContactsService) {
+  constructor(private comContactService: ComunityContactsService, private cityService: CityService) {
   //  this.comContactService.getShowComunityContacts().subscribe(
 ///res=> this.List=res,
 //err=>console.log(err)
 //)
-
+this.cityService.getShowCity().subscribe(
+  res=> this.allCities=res,
+  err=> console.log(err)
+  
+)
 
 }
       

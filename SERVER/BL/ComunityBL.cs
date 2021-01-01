@@ -39,37 +39,36 @@ namespace BL
                 if (per.QuienSoy == 2)
                 {
                     
-                   var com= CONVERTERES.ComunityConverters.ConvertComunityListToDTO
-                        (db.Comunities.Where(p => p.CostoCode == per.StatusEconomico && 
-                        p.SectorCode == per.Religion && p.anciano== true).ToList());
+                   var com= db.Comunities.Where(p => p.CostoCode == per.StatusEconomico && 
+                        p.SectorCode == per.Religion && p.anciano== true).ToList();
 
                     if (com == null)
                     {
-                        var com2= CONVERTERES.ComunityConverters.ConvertComunityListToDTO
-                        (db.Comunities.Where(p => p.CostoCode == per.StatusEconomico &&
-                         p.anciano == true).ToList());
+                        var com2= db.Comunities.Where(p => p.CostoCode == per.StatusEconomico &&
+                         p.anciano == true).ToList();
 
                         if (com2 == null)
                         {
                             return CONVERTERES.ComunityConverters.ConvertComunityListToDTO
                         (db.Comunities.Where(p => p.CostoCode == per.StatusEconomico).ToList());
                         }
-                        else return com2;
+                        else return CONVERTERES.ComunityConverters.ConvertComunityListToDTO(com2);
                     }
-                    else return com;
+
+                    else return CONVERTERES.ComunityConverters.ConvertComunityListToDTO(com);
                 }
                 else
                 {
-                    var com= CONVERTERES.ComunityConverters.ConvertComunityListToDTO(
+                    var com= 
                         db.Comunities.Where(p => p.CostoCode == per.StatusEconomico && 
-                        p.SectorCode == per.Religion).ToList());
+                        p.SectorCode == per.Religion).ToList();
                     if (com == null)
                     {
                         return  CONVERTERES.ComunityConverters.ConvertComunityListToDTO(
                         db.Comunities.Where(p => p.SectorCode == per.Religion).ToList());
                        
                     }
-                    else return com;
+                    else return CONVERTERES.ComunityConverters.ConvertComunityListToDTO(com);
 
                 }
             }

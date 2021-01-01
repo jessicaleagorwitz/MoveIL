@@ -10,7 +10,15 @@ namespace BL
 {
     public class SectorBL
     {
-        
-       
+
+        public static SectorDTO getSector(int Code)
+        {
+            using (DAL.MoveilEntities db = new DAL.MoveilEntities())
+            {
+                //return CONVERTERES.CityConverters.ConvertCityToDTO(db.NewCities.Single(t => t.CityCode == cityCode));
+                return CONVERTERES.SectorConverters.ConvertSectorToDTO(db.Sectors.FirstOrDefault(t => t.SectorCode == Code));
+
+            }
+        }
     }
 }

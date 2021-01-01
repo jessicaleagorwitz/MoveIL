@@ -14,9 +14,20 @@ namespace BL.CONVERTERES
         {
             return new Sector
             {
-            
+            SectorCode=com.SectorCode,
                SectorName=com.SectorName
 
+            };
+
+
+        }
+
+        public static SectorDTO ConvertSectorToDTO(Sector com)
+        {
+            return new SectorDTO
+            {
+                SectorCode = com.SectorCode,
+                SectorName = com.SectorName
             };
         }
     }

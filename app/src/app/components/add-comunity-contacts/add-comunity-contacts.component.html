@@ -7,34 +7,60 @@
     <title>Document</title>
 </head>
 <body>
-    <h2> Welcome to Moveil</h2>
-
-    <div>
-        <div *ngFor="let q of List">
-            <div class="questionview">
-                <div class="rightside">
-                    <div class="square">
-                        <strong>{{q.ContactName}}</strong> 
-                    </div>
-                    
-                </div>
-    
-                <div class="fill">
-                    <h4> Address {{q.Address}}</h4>
-    
-    
-    
-                    <div class="left">
-                        <div> phone {{q.PhoneNumber}}</div>
-                        <div> birth date {{q.BirthDate}}</div>
-                    </div>
-                    <div>
-                        <div> <span class="tag"> Year of alia {{q.YearOfAlia}} </span> </div>
-                    </div>
-                </div>
+   <!-- <div style="width: 80%; margin: auto;">
+        <h3>Add question of programming</h3>
+        <form [formGroup]="myForm" (submit)="addComunity()">
+            <div class="form-group">
+                <span class="error" *ngIf="myForm.controls['subject'].errors?.required!=null">*</span> <label>Choice a subject </label> 
+                <select class="form-control" formControlName="subject"> 
+                    <option value="*"> Choice... </option>
+                    <option *ngFor="let sub of allCities" [value]="sub.subjectId">{{sub.subjectName}}</option>
+                </select>
             </div>
-            <hr>    
-         </div> 
+            <div class="form-group">
+                <span class="error" *ngIf="myForm.controls['title'].errors?.required!=null">*</span> <label>Title of question </label> 
+                <input type="text" class="form-control" formControlName="title">
+            </div>
+            <div class="form-group">
+                <span class="error" *ngIf="myForm.controls['text'].errors?.required!=null">*</span> <label>Content of a question </label>  
+                <textarea cols="250" rows="15" class="form-control" formControlName="text"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary" value="add">
+        </form>
+    </div>-->
+    <div class="main">
+        <form [formGroup]="myform" (submit)="AddUser()">
+           <div class="form-group">
+            <label>Contact  Name </label>
+            <input type="text" class="form-control" formControlName="email">
+            <ul class="error" *ngIf="myform.controls['email'].errors!=null">
+         </ul>
+        </div>
+            <div class="form-group">
+                <label>mail </label>
+                <input type="text" class="form-control" formControlName="firstName">
+                <div class="error" *ngIf="myform.controls['firstName'].errors!=null"></div>
+         </div>
+         <div class="form-group">
+            <label>phone </label>
+            <input type="text" class="form-control" formControlName="lastName">
+            <div class="error" *ngIf="myform.controls['lastName'].errors!=null"></div>
+        </div>
+        <div class="form-group">
+            <label>city </label>
+            <input type="text" class="form-control" formControlName="country">
+            <div class="error" *ngIf="myform.controls['country'].errors!=null"></div>
+        </div>
+        
+           
+         
+        
+            <div>
+                <input type="submit" class="btn btn-success" value="sign in">
+                <!--<a [routerLink]="['/register']" class="btn btn-success">new user</a>-->
+            </div>
+        </form>
+          
         </div>
 </body>
 </html>

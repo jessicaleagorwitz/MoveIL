@@ -54,10 +54,7 @@ this.myForm = new FormGroup({
   religion: new FormControl('', Validators.required)
 });
 }
-goToComunity(){
- 
-  this.router.navigate(['/add-comunity', this.codeComunity]);
-}
+
 get r(){
   return this.form.controls;
 }
@@ -76,5 +73,10 @@ console.log(this.comList)}
 ,
   err=> console.log(err)
 )
+}
+goToComunity(code){
+ console.log(code);
+ 
+  this.router.navigate(['/add-comunity', code]);
 }
 }

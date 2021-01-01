@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { PersonalStatus } from '../models/PersonalStatus.model';
 import { Representante } from '../models/Representante';
+import { Sector } from '../models/Sector.model';
 
 @Injectable({
   providedIn: 'root'
@@ -33,5 +34,10 @@ return this.http.post<Comunity>(environment.url+'comunities/getYourComunity',par
 getRepresentante(code):Observable<Representante>
 {
   return this.http.post<Representante>(environment.url+'comunities/getRepresentante',parseInt(code));
+}
+
+getSector(code):Observable<Sector>
+{
+  return this.http.post<Sector>(environment.url+'comunities/getSector',parseInt(code));
 }
 }

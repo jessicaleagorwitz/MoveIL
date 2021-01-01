@@ -62,12 +62,12 @@ namespace BL
             using (MoveilEntities db = new MoveilEntities())
             {
 
-                var u = CONVERTERES.UserConverters.ConvertUserToDTO(db.Users.FirstOrDefault(t => t.Email.Equals(log.Email) && t.Password == log.Password));
-                if (u != null)
+                var u = db.Users.FirstOrDefault(t => t.Email == log.Email && t.Password == log.Password);
+                if (u == null)
                 {
-                    return u;
+                    return null;
                 }
-                return null;
+                return CONVERTERES.UserConverters.ConvertUserToDTO(u);
             }
         }
     }

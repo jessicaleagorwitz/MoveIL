@@ -5,6 +5,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { City } from 'src/app/shared/models/City.model';
 import { Contacts } from 'src/app/shared/models/Contacts.model';
 import { CityService } from 'src/app/shared/services/city.service';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-your-city',
@@ -30,6 +31,8 @@ contacts: Contacts[]
         res=> {this.MyCity=res},
         err=>console.log(err)
         )
+
+
         console.log(this.MyCity);
     
   this.code=CityCode
