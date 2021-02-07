@@ -77,6 +77,6 @@ console.log(this.comList)}
 goToComunity(code){
  console.log(code);
  
-  this.router.navigate(['/add-comunity', code]);
+  this.router.navigate(['/comunityPage', code]);
 }
 }

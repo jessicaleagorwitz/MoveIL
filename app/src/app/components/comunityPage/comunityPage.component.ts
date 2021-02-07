@@ -11,10 +11,10 @@ import { ComunityService } from 'src/app/shared/services/comunity.service';
 
 @Component({
   selector: 'app-add-comunity',
-  templateUrl: './add-comunity.component.html',
-  styleUrls: ['./add-comunity.component.css']
+  templateUrl: './comunityPage.component.html',
+  styleUrls: ['./comunityPage.component.css']
 })
-export class AddComunityComponent implements OnInit {
+export class ComunityPageComponent implements OnInit {
 comunity: Comunity;
 code;
 representante: Representante= new Representante()

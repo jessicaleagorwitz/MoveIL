@@ -161,8 +161,14 @@ my form-->
   <form [formGroup]="form" (ngSubmit)="submit()">
          
       <div class="form-group">
-          <label for="quiensoy">Quien soy:</label>
-          <div>
+        <div class="media">
+          <img src="../../../../assets/persona.jpg" class="mr-3 rounded img-thumbnail" alt="Sample Image" style="height: 300px; width: 500px; margin: 20px;">
+          <div class="media-body">
+              <br>
+              <br>
+              <h3 class="mt-0">Quien soy:</h3>
+              <br>
+               <div>
             <input id="quiensoy" type="radio" value="1" name="quiensoy" formControlName="quiensoy" >
             <label for="familia">Familia</label>
          </div>
@@ -179,6 +185,9 @@ my form-->
           <div *ngIf="f.quiensoy.touched && f.quiensoy.invalid" class="alert alert-danger">
               <div *ngIf="f.quiensoy.errors.required"> is required.</div>
           </div>
+          </div>
+        </div>
+         
       </div>
 
 
@@ -203,28 +212,43 @@ my form-->
         </div>
     </div>--> 
     <div class="form-group">
-      <label for="economico">Posibilidad economica</label>
-      <div>
+      <div class="media">
+        <img src="../../../../assets/eco.jpg" class="mr-3 rounded img-thumbnail" alt="Sample Image" style="height: 300px; width: 500px; margin: 20px;">
+        <div class="media-body">
+            <br>
+            <br>
+            <h3 class="mt-0">Posibilidad economica:</h3>
+            <br>
+            <div>
         <input id="economico" type="radio" value="1" name="economico" formControlName="economico" >
-        <label for="male">baja</label>
+        <label for="baja">baja</label>
      </div>
 
      <div>
         <input id="economico" type="radio" value="2" name="economico" formControlName="economico" >
-        <label for="female">promedio</label>
+        <label for="promedio">promedio</label>
      </div>
      <div>
-      <input id="economico" type="radio" value="2" name="economico" formControlName="economico" >
-      <label for="female">alta</label>
+      <input id="economico" type="radio" value="3" name="economico" formControlName="economico" >
+      <label for="alta">alta</label>
    </div>
       
       <div *ngIf="f.economico.touched && f.economico.invalid" class="alert alert-danger">
           <div *ngIf="f.economico.errors.required"> is required.</div>
       </div>
+        </div>
+      </div>
+      
     </div>
     <div class="form-group">
-      <label for="religion">Grado de religion</label>
-      <div>
+      <div class="media">
+        <img src="../../../../assets/grado.jpg" class="mr-3 rounded img-thumbnail" alt="Sample Image" style="height: 300px; width: 500px; margin: 20px;">
+        <div class="media-body">
+            <br>
+            <br>
+            <h3 class="mt-0">Grado de religion:</h3>
+            <br> 
+            <div>
         <input id="religion" type="radio" value="1" name="religion" formControlName="religion" >
         <label for="male">ortodoxo</label>
      </div>
@@ -236,11 +260,14 @@ my form-->
      <div>
       <input id="religion" type="radio" value="5" name="religion" formControlName="religion" >
       <label for="female">conservador</label>
-   </div>
+     </div>
       
       <div *ngIf="f.religion.touched && f.religion.invalid" class="alert alert-danger">
           <div *ngIf="f.religion.errors.required"> is required.</div>
       </div>
+        </div>
+      </div>
+     
   </div>
       <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
   </form>
@@ -261,7 +288,7 @@ my form-->
   
   <div class="card" *ngFor="let q of comList" style=" width:400px; margin: 5px; border-color:rgb(101, 189, 98);">
 
-    <img class="card-img-top" src="../../../assets/blanco.jpg"/>
+    <img class="card-img-top" src="../../../assets/cielo.jpg"/>
 
     <div class="card-body">
 

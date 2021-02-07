@@ -1,0 +1,49 @@
+
+<div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4 ripe-malinka-gradient">
+    <h1 class="display-3" style="font-size: 90px; text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Añadir Ciudad!</h1></div>
+
+<div class="main">
+
+    <form [formGroup]="myForm" (submit)="addCity()">
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['city'].errors?.required!=null">*</span> <label>Nombre de la Ciudad</label>  
+            <input type="text" class="form-control" formControlName="city">
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['distritoCode'].errors?.required!=null">*</span> <label>Distrito </label> 
+            <select class="form-control" formControlName="distritoCode"> 
+                <option value="*"> Choice... </option>
+                <option *ngFor="let sub of alldis" [value]="sub.DistritoCode">{{sub.DistritoName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['pobla'].errors?.required!=null">*</span> <label>Poblacion </label>  
+            <input type="text" class="form-control" formControlName="pobla">
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['alquilerCentro'].errors?.required!=null">*</span> <label>Alquiler centro de una habitacion </label>  
+            <input type="text" class="form-control" formControlName="alquilerCentro">
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['alquilerAfuera'].errors?.required!=null">*</span> <label>alquiler Afuera </label>  
+            <input type="text" class="form-control" formControlName="alquilerAfuera">
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['salario'].errors?.required!=null">*</span> <label>Salario Minimo </label>  
+            <input type="text" class="form-control" formControlName="salario">
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['about'].errors?.required!=null">*</span> <label>Un poco sobre la ciudad! </label>  
+            <textarea cols="250" rows="15" class="form-control" formControlName="about"></textarea>
+        </div>
+        
+           <!-- <div *ngIf="f.anciano.touched && f.anciano.invalid" class="alert alert-danger">
+                <div *ngIf="f.anciano.errors.required"> is required.</div>
+            </div>-->
+    
+        <input type="submit" class="btn btn-primary" value="add">
+</form>
+
+<br>
+<a class="btn  btn-lg btn-block ripe-malinka-gradient"  [routerLink]="['/directive']">Volver al director</a>
+</div>

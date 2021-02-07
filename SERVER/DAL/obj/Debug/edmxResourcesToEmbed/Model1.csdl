@@ -24,7 +24,7 @@
     <Property Name="CityCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DistritoCode" Type="Int32" Nullable="false" />
-    <Property Name="Poblacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Poblacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="AlquilerCentro" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="AlquilerAfueras" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SalarioMinimo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -32,6 +32,8 @@
     <NavigationProperty Name="Comunities" Relationship="Self.FK__Comunitie__CityC__5BAD9CC8" FromRole="NewCity" ToRole="Comunities" />
     <NavigationProperty Name="NewDistrito" Relationship="Self.FK__NewCity__Distrit__531856C7" FromRole="NewCity" ToRole="NewDistrito" />
     <NavigationProperty Name="NewContacts" Relationship="Self.FK__NewContac__CityC__540C7B00" FromRole="NewCity" ToRole="NewContact" />
+    <Property Name="NewPoblacion" Type="Int32" />
+    <Property Name="NewApt" Type="Int32" />
   </EntityType>
   <EntityType Name="NewContact">
     <Key>
@@ -68,7 +70,7 @@
     </Key>
     <Property Name="RecommendationCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserCode" Type="Int32" Nullable="false" />
-    <Property Name="FreeDescription" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FreeDescription" Type="String" MaxLength="320" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="User" Relationship="Self.FK__Recommend__UserC__56E8E7AB" FromRole="Recommendations" ToRole="Users" />
   </EntityType>
   <EntityType Name="Representante">

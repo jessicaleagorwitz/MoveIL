@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -27,6 +28,15 @@ namespace BL
                     return true;
               //  }
                // else return false;
+            }
+        }
+
+
+        public static List<UserDTO> getAllUsers()
+        {
+            using (MoveilEntities db = new MoveilEntities())
+            {
+                return CONVERTERES.UserConverters.ConvertUserListToDTO(db.Users.ToList());
             }
         }
 
@@ -67,7 +77,12 @@ namespace BL
                 {
                     return null;
                 }
-                return CONVERTERES.UserConverters.ConvertUserToDTO(u);
+                var u2= CONVERTERES.UserConverters.ConvertUserToDTO(u);
+                if (ConfigurationManager.AppSettings["UserName"] == log.Email && ConfigurationManager.AppSettings["Password"] == log.Password)
+                 u2.IfDirective = true;
+                return u2; 
+                
+
             }
         }
     }

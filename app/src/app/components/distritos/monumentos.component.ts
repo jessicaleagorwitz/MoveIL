@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { City } from 'src/app/shared/models/City.model';
 import { Distrito } from 'src/app/shared/models/Distrito.model';
-import {DistritoService} from '../.../../../shared/services/distrito.service'
+import {DistritoService} from '../../shared/services/distrito.service'
 @Component({
   selector: 'app-monumentos',
   templateUrl: './monumentos.component.html',

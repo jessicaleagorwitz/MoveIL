@@ -17,5 +17,8 @@ namespace DTO
         public string AlquilerAfueras { get; set; }
         public string SalarioMinimo { get; set; }
         public string AboutCity { get; set; }
+
+        public int NewPoblacion { get; set; }
+        public int NewApt { get; set; }
     }
 }

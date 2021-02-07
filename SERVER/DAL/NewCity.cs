@@ -29,6 +29,8 @@ namespace DAL
         public string AlquilerAfueras { get; set; }
         public string SalarioMinimo { get; set; }
         public string AboutCity { get; set; }
+        public Nullable<int> NewPoblacion { get; set; }
+        public Nullable<int> NewApt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comunity> Comunities { get; set; }

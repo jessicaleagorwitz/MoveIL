@@ -39,6 +39,10 @@ export class LoginComponent implements OnInit {
     res=>{
       if(res!=null){
       this.login.setCurrentUser(res);
+      if(res.IfDirective==true){
+        this.router.navigate(['/directive']);
+      }
+      else
       this.router.navigate(['/home']);
     }
     else{

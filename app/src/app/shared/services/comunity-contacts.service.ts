@@ -21,10 +21,10 @@ export class ComunityContactsService {
   //  return this.http.get<Array<Contacts>>(environment.url+'comunityContacts/getShowComunityContacts')
  // }
 
- // AddComunityContacts(comunityContacts: Contacts): Observable<boolean>
- // {
- //   return this.http.post<boolean>(environment.url + 'comunityContacts/AddComunityContacts', comunityContacts);
- // }
+  AddContacts(Contacts: Contacts): Observable<boolean>
+  {
+   return this.http.post<boolean>(environment.url + 'Contacts/AddContacts', Contacts);
+  }
 
  getRecomendations():Observable<Recommendation[]> {
    return this.http.get<Recommendation[]>(environment.url+'Recommendation/getShowRecommendation')

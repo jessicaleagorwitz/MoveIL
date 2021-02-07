@@ -20,22 +20,16 @@ namespace API.Controllers
             BL.CostoBL.AddCosto(com);
             return Ok();
         }
-        [Route("getShowCountry")]
-        [HttpGet]
-        public IHttpActionResult getShowCosto()
+      
 
-        {
-            BL.CostoBL.getShowCosto();
-            return Ok(true);
-        }
         //[Route("Country")]
         //[HttpGet]
         //public IHttpActionResult country()
         //{
         //    BL.CountryBL.AddCountries();
         //    return Ok(true);
-            
+
         //}
-       
+
     }
 }

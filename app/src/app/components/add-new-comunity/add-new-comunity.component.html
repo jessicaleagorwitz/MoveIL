@@ -1,0 +1,64 @@
+<div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4 ripe-malinka-gradient">
+    <h1 class="display-3" style="font-size: 90px; text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Añadir Comunidad</h1></div>
+
+<div class="main">
+    
+    <form [formGroup]="myForm" (submit)="addComunity()">
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['name'].errors?.required!=null">*</span> <label>Nombre de la Comunidad </label> 
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['cityCode'].errors?.required!=null">*</span> <label>City </label> 
+            <select class="form-control" formControlName="cityCode"> 
+                <option value="*"> Choice... </option>
+                <option *ngFor="let sub of allCity" [value]="sub.CityCode">{{sub.CityName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['sectorCode'].errors?.required!=null">*</span> <label>Sector </label> 
+            <select class="form-control" formControlName="sectorCode"> 
+                <option value="*"> Choice... </option>
+                <option *ngFor="let sub of allSector" [value]="sub.SectorCode">{{sub.SectorName}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['representanteCode'].errors?.required!=null">*</span> <label>Representante </label> 
+            <select class="form-control" formControlName="representanteCode"> 
+                <option value="*"> Choice... </option>
+                <option *ngFor="let sub of allRepresentante" [value]="sub.RepresentanteCode">{{sub.Name}}</option>
+            </select>
+            <a class="btn  btn-lg ripe-malinka-gradient" style="font-size: 15px; font-family: Arial, Helvetica, sans-serif;" [routerLink]="['/addRep']">Add Representante</a>
+        </div>
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['costoCode'].errors?.required!=null">*</span> <label>Costo </label> 
+            <select class="form-control" formControlName="costoCode"> 
+                <option value="*"> Choice... </option>
+                <option *ngFor="let sub of allCosto" [value]="sub.CostoCode">{{sub.CostoName}}</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <span class="error" *ngIf="myForm.controls['about'].errors?.required!=null">*</span> <label>Sobre la comunidad... </label>  
+            <textarea cols="250" rows="15" class="form-control" formControlName="about"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="anciano">Es una ciudad para gente mayor?</label>
+            <div>
+              <input id="anciano" type="radio" value="true" name="anciano" formControlName="anciano" >
+              <label for="male">Si</label>
+           </div>
+      
+           <div>
+              <input id="anciano" type="radio" value="false" name="anciano" formControlName="anciano" >
+              <label for="female">No</label>
+           </div>
+           <!-- <div *ngIf="f.anciano.touched && f.anciano.invalid" class="alert alert-danger">
+                <div *ngIf="f.anciano.errors.required"> is required.</div>
+            </div>-->
+        </div>
+        <input type="submit" class="btn btn-primary" style="width: 80px; font-size: 20px;" value="Add">
+    </form>
+    <br>
+    <a class="btn  btn-lg btn-block ripe-malinka-gradient"  [routerLink]="['/directive']">Volver al director</a>
+</div>

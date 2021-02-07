@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddComunityComponent } from './add-comunity.component';
+import { AddRepresentanteComponent } from './add-representante.component';
 
-describe('AddComunityComponent', () => {
-  let component: AddComunityComponent;
-  let fixture: ComponentFixture<AddComunityComponent>;
+describe('AddRepresentanteComponent', () => {
+  let component: AddRepresentanteComponent;
+  let fixture: ComponentFixture<AddRepresentanteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddComunityComponent ]
+      declarations: [ AddRepresentanteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddComunityComponent);
+    fixture = TestBed.createComponent(AddRepresentanteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

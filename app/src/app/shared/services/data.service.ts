@@ -14,6 +14,12 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+  getAllUsers():Observable<User[]>
+  {
+  
+return this.http.get<User[]>(environment.url+ 'user/getAllUsers')
+  }
+
  //add user register
   addUser(user:User):Observable<boolean>
   {

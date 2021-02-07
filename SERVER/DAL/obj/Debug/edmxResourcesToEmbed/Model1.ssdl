@@ -20,11 +20,13 @@
     <Property Name="CityCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CityName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="DistritoCode" Type="int" Nullable="false" />
-    <Property Name="Poblacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Poblacion" Type="nvarchar" MaxLength="50" />
     <Property Name="AlquilerCentro" Type="nvarchar" MaxLength="50" />
     <Property Name="AlquilerAfueras" Type="nvarchar" MaxLength="50" />
     <Property Name="SalarioMinimo" Type="nvarchar" MaxLength="50" />
     <Property Name="AboutCity" Type="nvarchar" MaxLength="150" />
+    <Property Name="NewPoblacion" Type="int" />
+    <Property Name="NewApt" Type="int" />
   </EntityType>
   <EntityType Name="NewContact">
     <Key>
@@ -58,7 +60,7 @@
     </Key>
     <Property Name="RecommendationCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserCode" Type="int" Nullable="false" />
-    <Property Name="FreeDescription" Type="nvarchar" MaxLength="120" Nullable="false" />
+    <Property Name="FreeDescription" Type="nvarchar" MaxLength="320" Nullable="false" />
   </EntityType>
   <EntityType Name="Representante">
     <Key>

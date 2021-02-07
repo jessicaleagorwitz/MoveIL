@@ -21,8 +21,8 @@ namespace API.Controllers
           
             return Ok(1);
         }
-        [Route("AddComunityContacts"), HttpPost]
-        public IHttpActionResult AddComunityContacts(ContactDTO com)
+        [Route("AddContacts"), HttpPost]
+        public IHttpActionResult AddContacts(ContactDTO com)
         {
             BL.ContactBL.AddContacts(com);
             return Ok(true);

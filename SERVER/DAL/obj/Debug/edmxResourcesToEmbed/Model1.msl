@@ -18,6 +18,8 @@
     <EntitySetMapping Name="NewCities">
       <EntityTypeMapping TypeName="MoveilModel.NewCity">
         <MappingFragment StoreEntitySet="NewCity">
+          <ScalarProperty Name="NewApt" ColumnName="NewApt" />
+          <ScalarProperty Name="NewPoblacion" ColumnName="NewPoblacion" />
           <ScalarProperty Name="CityCode" ColumnName="CityCode" />
           <ScalarProperty Name="CityName" ColumnName="CityName" />
           <ScalarProperty Name="DistritoCode" ColumnName="DistritoCode" />

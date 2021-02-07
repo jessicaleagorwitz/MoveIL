@@ -14,7 +14,7 @@ namespace API.Controllers
     public class CityController : ApiController
     {
 
-
+        [Route("addCity"), HttpPost]
         public void AddCity(CityDTO com)
         {
             BL.CityBL.AddCity(com);
@@ -35,6 +35,13 @@ namespace API.Controllers
 
         {
             return Ok(BL.CityBL.getYourCity(cityCode));
+        }
+
+
+        [Route("getSearchCity"), HttpPost]
+        public IHttpActionResult getSearchCity(CityStatusDTO c)
+        {
+            return Ok(BL.CityBL.getSearchCity(c));
         }
 
     }

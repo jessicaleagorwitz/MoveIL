@@ -30,5 +30,12 @@ namespace BL.CONVERTERES
                 SectorName = com.SectorName
             };
         }
+
+        public static List<SectorDTO> ConvertSectorListToDTO(List<Sector> list)
+        {
+
+            return list.Select(p => ConvertSectorToDTO(p)).ToList();
+
+        }
     }
 }

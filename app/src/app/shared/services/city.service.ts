@@ -4,6 +4,7 @@ import { City } from '../models/City.model';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Contacts } from '../models/Contacts.model';
+import { CityStatus } from '../models/CityStatus.model';
 
 @Injectable({
   providedIn: 'root'
@@ -29,9 +30,9 @@ export class CityService {
   getContacts(cityCode):Observable<Contacts[]>{
     return this.http.post<Contacts[]>(environment.url+'Contacts/getContacts',parseInt(cityCode)) 
   }
-  //city
-  SearchCity(cityName):Observable<City>{
-    return this.http.post<City>(environment.url+'City/getSearchCity',cityName) 
+  // search your city
+  getSearchCity(city :CityStatus):Observable<City[]>{
+    return this.http.post<City[]>(environment.url+'City/getSearchCity',city) 
   }
   
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4 ripe-malinka-gradient">
+        <h1 class="display-3" style="font-size: 90px; text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Añadir representante</h1></div>
+ 
+    <div class="main">
+       
+        <form [formGroup]="myForm" (submit)="addRepresentante()">
+            <div class="form-group">
+                <span class="error" *ngIf="myForm.controls['name'].errors?.required!=null">*</span> <label>Nombre del Representante </label>  
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            
+            <div class="form-group">
+                <span class="error" *ngIf="myForm.controls['phone'].errors?.required!=null">*</span> <label>Teléfono </label>  
+                <input type="text" class="form-control" formControlName="phone">
+            </div>
+            <div class="form-group">
+                <span class="error" *ngIf="myForm.controls['mail'].errors?.required!=null">*</span> <label>Mail </label>  
+                <input type="text" class="form-control" formControlName="mail">
+            </div>
+            
+               <!-- <div *ngIf="f.anciano.touched && f.anciano.invalid" class="alert alert-danger">
+                    <div *ngIf="f.anciano.errors.required"> is required.</div>
+                </div>-->
+        
+            <input type="submit" class="btn btn-primary" value="add">
+    </form>
+
+<a class="btn  btn-lg btn-block ripe-malinka-gradient"  [routerLink]="['/addComunity']">Volver a AddComunity</a>
+<a class="btn  btn-lg btn-block ripe-malinka-gradient"  [routerLink]="['/directive']">Volver al director</a>
+</div>
+</body>
+</html>

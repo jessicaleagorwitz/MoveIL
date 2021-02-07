@@ -14,7 +14,7 @@ namespace BL.CONVERTERES
         {
             return new NewCosto
             {
-                
+                CostoCode=com.CostoCode,
                 CostoName=com.CostoName
             };
         }
@@ -22,7 +22,7 @@ namespace BL.CONVERTERES
         {
             return new DTO.CostoDTO
             {
-              
+                CostoCode = com.CostoCode,
                 CostoName = com.CostoName
 
 

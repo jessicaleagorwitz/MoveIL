@@ -18,7 +18,9 @@ namespace BL
                 db.SaveChanges();
             }
         }
-        public static List<CostoDTO> getShowCosto()
+       
+        
+        public static List<CostoDTO> getAllCosto()
         {
             using (MoveilEntities db = new MoveilEntities())
             {

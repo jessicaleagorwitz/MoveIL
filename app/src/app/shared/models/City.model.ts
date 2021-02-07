@@ -7,4 +7,6 @@ export class City{
     AlquilerAfueras :string
     SalarioMinimo :string
     AboutCity :string
+    NewPoblacion: number
+    NewApt: number
 }

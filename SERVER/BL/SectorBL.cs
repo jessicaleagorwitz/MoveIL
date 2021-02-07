@@ -20,5 +20,13 @@ namespace BL
 
             }
         }
+
+        public static List<SectorDTO> getAllSectors()
+        {
+            using (MoveilEntities db = new MoveilEntities())
+            {
+                return CONVERTERES.SectorConverters.ConvertSectorListToDTO(db.Sectors.ToList());
+            }
+        }
     }
 }

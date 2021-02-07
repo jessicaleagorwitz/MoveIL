@@ -14,8 +14,8 @@ namespace BL.CONVERTERES
         {
             return new Representante
             {
-               
-                 Name=com.Name,
+                RepresentanteCode = com.RepresentanteCode,
+                Name =com.Name,
                  Email=com.Email ,
                   PhoneNumber=com.PhoneNumber
 
@@ -33,5 +33,11 @@ namespace BL.CONVERTERES
             };
         }
 
+        public static List<RepresentanteDTO> ConvertRepresentanteListToDTO(List<Representante> list)
+        {
+
+            return list.Select(p => ConvertRepresentanteToDTO(p)).ToList();
+
+        }
     }
 }

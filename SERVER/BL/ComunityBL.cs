@@ -42,17 +42,18 @@ namespace BL
                    var com= db.Comunities.Where(p => p.CostoCode == per.StatusEconomico && 
                         p.SectorCode == per.Religion && p.anciano== true).ToList();
 
-                    if (com == null)
+                    if (com == null || com.Count==0)
                     {
                         var com2= db.Comunities.Where(p => p.CostoCode == per.StatusEconomico &&
                          p.anciano == true).ToList();
 
-                        if (com2 == null)
+                        if (com == null || com.Count == 0)
                         {
                             return CONVERTERES.ComunityConverters.ConvertComunityListToDTO
-                        (db.Comunities.Where(p => p.CostoCode == per.StatusEconomico).ToList());
+                        (db.Comunities.Where(p => p.CostoCode == per.StatusEconomico &&
+                        p.SectorCode == per.Religion).ToList());
                         }
-                        else return CONVERTERES.ComunityConverters.ConvertComunityListToDTO(com2);
+                        else return CONVERTERES.ComunityConverters.ConvertComunityListToDTO(com);
                     }
 
                     else return CONVERTERES.ComunityConverters.ConvertComunityListToDTO(com);
@@ -62,7 +63,7 @@ namespace BL
                     var com= 
                         db.Comunities.Where(p => p.CostoCode == per.StatusEconomico && 
                         p.SectorCode == per.Religion).ToList();
-                    if (com == null)
+                    if (com == null || com.Count == 0)
                     {
                         return  CONVERTERES.ComunityConverters.ConvertComunityListToDTO(
                         db.Comunities.Where(p => p.SectorCode == per.Religion).ToList());

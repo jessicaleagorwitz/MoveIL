@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CityDTO.cs" />
+    <Compile Include="CityStatusDTO.cs" />
     <Compile Include="ComunityDTO.cs" />
     <Compile Include="ContactDTO.cs" />
     <Compile Include="CostoDTO.cs" />

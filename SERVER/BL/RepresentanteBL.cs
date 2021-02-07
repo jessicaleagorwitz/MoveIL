@@ -20,5 +20,22 @@ namespace BL
 
             }
         }
+
+        public static List<RepresentanteDTO> getAllRepresentantes()
+        {
+            using (DAL.MoveilEntities db = new DAL.MoveilEntities())
+            {
+                return CONVERTERES.RepresentanteConverter.ConvertRepresentanteListToDTO(db.Representantes.ToList());
+            }
+        }
+
+        public static void AddRepresentante(RepresentanteDTO com)
+        {
+            using (DAL.MoveilEntities db = new DAL.MoveilEntities())
+            {
+                db.Representantes.Add(CONVERTERES.RepresentanteConverter.RepresentantetoDal(com));
+                db.SaveChanges();
+            }
+        }
     }
 }

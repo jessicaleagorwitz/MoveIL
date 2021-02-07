@@ -27,7 +27,7 @@
             </div>
             <input type="submit" class="btn btn-primary" value="add">
         </form>
-    </div>-->
+    </div>
     <div class="main">
         <form [formGroup]="myform" (submit)="AddUser()">
            <div class="form-group">
@@ -57,10 +57,54 @@
         
             <div>
                 <input type="submit" class="btn btn-success" value="sign in">
-                <!--<a [routerLink]="['/register']" class="btn btn-success">new user</a>-->
+                <a [routerLink]="['/register']" class="btn btn-success">new user</a>
             </div>
         </form>
           
-        </div>
+        </div>-->
+        <div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4 ripe-malinka-gradient">
+            <h1 class="display-3" style="font-size: 90px; text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Añadir Contacto!</h1></div>
+     
+        <div class="main">
+
+            <form [formGroup]="myForm" (submit)="addContacts()">
+                <div class="form-group">
+                    <span class="error" *ngIf="myForm.controls['contact'].errors?.required!=null">*</span> <label>Nombre del Contacto </label>  
+                    <input type="text" class="form-control" formControlName="contact">
+                </div>
+                <div class="form-group">
+                    <span class="error" *ngIf="myForm.controls['cityCode'].errors?.required!=null">*</span> <label>City </label> 
+                    <select class="form-control" formControlName="cityCode"> 
+                        <option value="*"> Choice... </option>
+                        <option *ngFor="let sub of allCity" [value]="sub.CityCode">{{sub.CityName}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <span class="error" *ngIf="myForm.controls['country'].errors?.required!=null">*</span> <label>Country </label>  
+                    <input type="text" class="form-control" formControlName="country">
+                </div>
+                <div class="form-group">
+                    <span class="error" *ngIf="myForm.controls['phone'].errors?.required!=null">*</span> <label>Teléfono </label>  
+                    <input type="text" class="form-control" formControlName="phone">
+                </div>
+                <div class="form-group">
+                    <span class="error" *ngIf="myForm.controls['mail'].errors?.required!=null">*</span> <label>Mail </label>  
+                    <input type="text" class="form-control" formControlName="mail">
+                </div>
+                <div class="form-group">
+                    <span class="error" *ngIf="myForm.controls['about'].errors?.required!=null">*</span> <label>Un poco sobre mi... </label>  
+                    <textarea cols="250" rows="15" class="form-control" formControlName="about"></textarea>
+                </div>
+                
+                   <!-- <div *ngIf="f.anciano.touched && f.anciano.invalid" class="alert alert-danger">
+                        <div *ngIf="f.anciano.errors.required"> is required.</div>
+                    </div>-->
+            
+                <input type="submit" class="btn btn-primary" value="add">
+        </form>
+   
+    <br>
+    <a class="btn  btn-lg btn-block ripe-malinka-gradient"  [routerLink]="['/directive']">Volver al director</a>
+ </div>
 </body>
 </html>

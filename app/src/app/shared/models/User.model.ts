@@ -7,4 +7,5 @@ export class User{
     Email: string
     UserCode: number
     Country: string
+    IfDirective: boolean
 }

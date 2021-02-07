@@ -6,14 +6,14 @@
     <edmx:Diagrams>
       <Diagram DiagramId="cdbfadbe50044b15bceef931fcb01f28" Name="Diagram1">
         <EntityTypeShape EntityType="MoveilModel.Comunity" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.NewCity" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.NewContact" Width="1.5" PointX="5.625" PointY="7.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.NewCosto" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.NewDistrito" Width="1.5" PointX="1.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.Recommendation" Width="1.5" PointX="10" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.Representante" Width="1.5" PointX="5.25" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.Sector" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MoveilModel.User" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.NewCity" Width="1.5" PointX="4.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.NewContact" Width="1.5" PointX="6.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.NewCosto" Width="1.5" PointX="1.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.NewDistrito" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.Recommendation" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.Representante" Width="1.5" PointX="4.75" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.Sector" Width="1.5" PointX="1.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoveilModel.User" Width="1.5" PointX="6.5" PointY="0.5" IsExpanded="true" />
         <AssociationConnector Association="MoveilModel.FK__Comunitie__CityC__5BAD9CC8" ManuallyRouted="false" />
         <AssociationConnector Association="MoveilModel.FK__Comunitie__Costo__5CA1C101" ManuallyRouted="false" />
         <AssociationConnector Association="MoveilModel.FK__Comunitie__Repre__6166761E" ManuallyRouted="false" />

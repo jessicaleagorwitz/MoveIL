@@ -23,13 +23,15 @@ namespace BL
             }
         }
 
-        //מציגה את המלצות
+        //מציגה את המלצות random 3 
         public static List<RecommendationDTO> getShowRecommendation()
         {
             using (MoveilEntities db = new MoveilEntities())
             {
                
-                return CONVERTERES.RecommendationConverters.ConvertRecommendationListToDTO(db.Recommendations.ToList().OrderBy(x => Guid.NewGuid()).Take(3).ToList());
+                return CONVERTERES.RecommendationConverters.
+                    ConvertRecommendationListToDTO(db.Recommendations.ToList().
+                    OrderBy(x => Guid.NewGuid()).Take(3).ToList());
             }
         }
     }

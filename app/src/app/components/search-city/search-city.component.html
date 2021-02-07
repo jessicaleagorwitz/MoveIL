@@ -1,0 +1,150 @@
+
+<div class="dusty-grass-gradient color-block mb-3 mx-auto z-depth-1-half p-4">
+    <h1 class="display-3" style="font-size: 90px; text-align: center;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" >Buscando mi Ciudad</h1></div>
+
+    <div class="container main">
+ 
+     
+        <form [formGroup]="form" (ngSubmit)="submit()">
+               
+            <div class="form-group">
+               <br>
+               <br>
+               <img src="../../../assets/num1.png" style="width: 200px; height: 200px;" >
+                <label style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" for="precioApt">¿Cuanto puedo pagar por una habitacion en el centro?</label>
+                <div>
+                  <br> <br>
+                  <input id="precioApt" type="radio" value="1" name="precioApt" formControlName="precioApt" >
+                  <label for="familia">Mayor a 1400$</label>
+               </div>
+       
+               <div>
+                  <input id="precioApt" type="radio" value="2" name="precioApt" formControlName="precioApt" >
+                  <label for="Retirados">Mayor a 1200$</label>
+               </div>
+               <div>
+                <input id="precioApt" type="radio" value="3" name="precioApt" formControlName="precioApt" >
+                <label for="Joven">Mayor a 1000$</label>
+             </div>
+             <div>
+               <input id="precioApt" type="radio" value="4" name="precioApt" formControlName="precioApt" >
+               <label for="Joven">Menor a 1000$</label>
+            </div>
+                
+                <div *ngIf="f.precioApt.touched && f.precioApt.invalid" class="alert alert-danger">
+                    <div *ngIf="f.precioApt.errors.required"> is required.</div>
+                </div>
+            </div>
+      
+      
+          <!-- <div class="form-group">
+              <label for="economico">Posibilidad economica:</label>
+              <div>
+                <input id="economico" type="radio" value="1" name="economico" formControlName="economico" >
+                <label for="male">baja</label>
+             </div>
+      
+             <div>
+                <input id="economico" type="radio" value="2" name="economico" formControlName="economico" >
+                <label for="female">promedio</label>
+             </div>
+             <div>
+              <input id="economico" type="radio" value="3" name="economico" formControlName="economico" >
+              <label for="female">alta</label>
+           </div>
+              
+              <div *ngIf="f.economico.touched && f.economico.invalid" class="alert alert-danger">
+                  <div *ngIf="f.economico.errors.required"> is required.</div>
+              </div>
+          </div>--> 
+          <br>
+          <br>
+          <br>
+          <div class="form-group">
+            <img src="../../../assets/num22.jpg" style="width: 200px; height: 200px;" >
+            <br>
+            <label style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" for="distrito"> ¿En que Distrito?</label>
+            <div>
+               <br> <br>
+              <input id="distrito" type="radio" value="1" name="distrito" formControlName="distrito" >
+              <label for="baja">Central</label>
+           </div>
+           
+           <div>
+              <input id="distrito" type="radio" value="2" name="distrito" formControlName="distrito" >
+              <label for="promedio">Haifa</label>
+           </div>
+           <div>
+            <input id="distrito" type="radio" value="3" name="distrito" formControlName="distrito" >
+            <label for="alta">Jerusalem</label>
+         </div>
+         <div>
+            <input id="distrito" type="radio" value="4" name="distrito" formControlName="distrito" >
+            <label for="alta">Sur</label>
+         </div>
+         <div>
+            <input id="distrito" type="radio" value="5" name="distrito" formControlName="distrito" >
+            <label for="alta">Tel Aviv</label>
+         </div>
+         <div>
+            <input id="distrito" type="radio" value="6" name="distrito" formControlName="distrito" >
+            <label for="alta">Norte</label>
+         </div>
+         <div>
+            <input id="distrito" type="radio" value="7" name="distrito" formControlName="distrito" >
+            <label for="alta">Yehuda y Shomron</label>
+         </div>
+            
+            <div *ngIf="f.distrito.touched && f.distrito.invalid" class="alert alert-danger">
+                <div *ngIf="f.distrito.errors.required"> is required.</div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class="form-group">
+            <img src="../../../assets/num33.jpg" style="width: 200px; height: 200px;" >
+            <br>
+            <br>
+            <label style="font-size: 40px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" for="poblacion">¿Cuanta Poblacion en la ciudad?</label>
+            <div>
+               <br> <br>
+              <input id="poblacion" type="radio" value="1" name="poblacion" formControlName="poblacion" >
+              <label for="male">Mayor a 200,000</label>
+           </div>
+      
+           <div>
+              <input id="poblacion" type="radio" value="2" name="poblacion" formControlName="poblacion" >
+              <label for="female">Mayor a 100,000</label>
+           </div>
+           <div>
+            <input id="poblacion" type="radio" value="3" name="poblacion" formControlName="poblacion" >
+            <label for="female">Menor a 100,000</label>
+           </div>
+            
+            <div *ngIf="f.poblacion.touched && f.poblacion.invalid" class="alert alert-danger">
+                <div *ngIf="f.poblacion.errors.required"> is required.</div>
+            </div>
+        </div>
+            <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+        </form>
+      </div>
+      
+      
+      <div class="card-columns"  >
+  
+        <div class="card" *ngFor="let q of comList" style=" width:400px; margin: 5px; border-color:rgb(101, 189, 98);">
+      
+          <img class="card-img-top" src="../../../assets/{{q.CityCode}}.jpg"/>
+      
+          <div class="card-body">
+      
+            <h5 class="card-title" style="font-size: 30px;">{{q.CityName}}</h5>
+      
+          </div>
+  
+          <a class="btn  dusty-grass-gradient color-block " (click)="goToCity(q.CityCode)" >Ver mas</a>
+      
+        </div>
+      
+      </div>
